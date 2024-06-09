@@ -1,7 +1,6 @@
 ﻿using PetPalBack.shared.Domain.Repositories;
 using PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace PetPalBack.shared.Infrastructure.Persistance.EFC.Repositories
 {
@@ -11,7 +10,7 @@ namespace PetPalBack.shared.Infrastructure.Persistance.EFC.Repositories
 
         protected BaseRepository(AppDbContext context)
         {
-            Context = context;  
+            Context = context;
         }
 
         public async Task AddAsync(TEntity entity)
