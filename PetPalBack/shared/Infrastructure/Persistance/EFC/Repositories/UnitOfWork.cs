@@ -1,9 +1,9 @@
-﻿using static PetPalBack.shared.Infrastructure.Persistance.EFC.Repositories.UnitOfWork;
-using PetPalBack.shared.Domain.Repositories;
-using PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations;
+﻿using static PetPalBack.Shared.Infrastructure.Persistance.EPC.Repositories.UnitOfWork;
+using PetPalBack.Shared.Domain.Repositories;
+using PetPalBack.Shared.Infrastructure.Persistance.EPC.Configuration;
 using System;
 
-namespace PetPalBack.shared.Infrastructure.Persistance.EFC.Repositories
+namespace PetPalBack.Shared.Infrastructure.Persistance.EPC.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {

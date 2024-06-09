@@ -1,8 +1,8 @@
 ﻿using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
-using PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations.Extensions;
+using PetPalBack.Shared.Infrastructure.Persistance.EPC.Configuration.Extensions;
 using Microsoft.EntityFrameworkCore;
 
-namespace PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations
+namespace PetPalBack.Shared.Infrastructure.Persistance.EPC.Configuration
 {
     public class AppDbContext(DbContextOptions options) : DbContext(options)
     {

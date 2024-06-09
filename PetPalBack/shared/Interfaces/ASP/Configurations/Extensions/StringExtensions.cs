@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace PetPalBack.shared.Interfaces.ASP.Configurations.Extensions
+namespace PetPalBack.Shared.Interfaces.ASP.Configuration.Extensions
 {
     public static partial class StringExtensions
     {

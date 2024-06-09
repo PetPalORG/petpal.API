@@ -1,6 +1,6 @@
 ﻿using Humanizer;
 
-namespace PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations.Extensions
+namespace PetPalBack.Shared.Infrastructure.Persistance.EPC.Configuration.Extensions
 {
     public static class StringExtensions
     {
