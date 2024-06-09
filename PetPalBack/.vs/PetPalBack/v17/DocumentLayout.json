@@ -62,15 +62,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
@@ -116,7 +112,7 @@
               "RelativeDocumentMoniker": "Shared\\Infrastructure\\Persistance\\EFC\\Configurations\\AppObContext.cs",
               "ToolTip": "D:\\U\\Ciclo 2024-01\\Aplicaciones Web\\Repositories\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Persistance\\EFC\\Configurations\\AppObContext.cs",
               "RelativeToolTip": "Shared\\Infrastructure\\Persistance\\EFC\\Configurations\\AppObContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T00:21:36.565Z",
               "EditorCaption": ""
@@ -131,8 +127,7 @@
               "RelativeToolTip": "Shared\\Infrastructure\\Persistance\\EFC\\Repositories\\BaseRespository.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAQwBsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T23:20:10.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T23:20:10.919Z"
             },
             {
               "$type": "Document",
