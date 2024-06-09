@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PetPalBack.Interfaces.REST.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class RegistrationController : ControllerBase
     {
         private readonly IMediator _mediator;
