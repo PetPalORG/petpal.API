@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace PetPalBack.shared.Interfaces.ASP.Configurations.Extensions
+namespace PetPalBack.Shared.Infrastructure.Persistence.EPC.Configuration.Extensions
 {
     public static class ModelStateExtensions
     {
-        public static List<string> GetErrorMessages(this ModelStateDictionary dictionary)
+        public static List<string> GetErrorMessage(this ModelStateDictionary dictionary)
         {
             return dictionary
                 .SelectMany(m => m.Value!.Errors)
@@ -13,4 +13,3 @@ namespace PetPalBack.shared.Interfaces.ASP.Configurations.Extensions
         }
     }
 }
- 
