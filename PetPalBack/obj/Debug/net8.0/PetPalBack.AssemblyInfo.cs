@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PetPalBack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74fd7d38ee5aa0512b0522c3eb2f959b1bdae647")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+888250726b8d52e255e7bb4859e3e492832855f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("PetPalBack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PetPalBack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
