@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc.ApplicationModels;
+﻿
+using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using PetPalBack.shared.Interfaces.ASP.Configurations.Extensions;
 
-namespace PetPalBack.shared.Infrastructure.Interfaces.ASP.Configurations
+namespace PetPalBack.Shared.Infrastructure.Interfaces.ASP.Configurations
 {
     public class KebabCaseRouteNamingConvention : IControllerModelConvention
     {

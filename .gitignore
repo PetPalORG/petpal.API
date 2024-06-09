@@ -477,4 +477,4 @@ $RECYCLE.BIN/
 *.lnk
 
 /PetPalBack/obj/
-
+PetPalBack/bin/Debug/net8.0/PetPalBack.pdb

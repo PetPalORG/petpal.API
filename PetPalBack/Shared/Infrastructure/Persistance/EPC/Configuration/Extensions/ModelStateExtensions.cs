@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace cat_up_api.Shared.Infrastructure.Persistence.EPC.Configuration.Extensions
+namespace PetPalBack.Shared.Infrastructure.Persistence.EPC.Configuration.Extensions
 {
     public static class ModelStateExtensions
     {
