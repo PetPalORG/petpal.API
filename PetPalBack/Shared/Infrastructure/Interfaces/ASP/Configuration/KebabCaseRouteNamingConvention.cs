@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.ApplicationModels;
+﻿
+using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using PetPalBack.shared.Interfaces.ASP.Configurations.Extensions;
 
 namespace PetPalBack.Shared.Infrastructure.Interfaces.ASP.Configurations

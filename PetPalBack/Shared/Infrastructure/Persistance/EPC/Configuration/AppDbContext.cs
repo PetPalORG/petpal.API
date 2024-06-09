@@ -2,6 +2,7 @@
 using PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations.Extensions;
 using Microsoft.EntityFrameworkCore;
 using PetPalBack.PetRegister.Domain.Model.Aggregates;
+using PetPalBack.Domain.Model.Entities;
 
 namespace PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations
 {
@@ -27,9 +28,18 @@ namespace PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations
             builder.Entity<Pet>().Property(p => p.Weight).IsRequired();
             builder.Entity<Pet>().Property(p => p.UserId).IsRequired();
 
+            builder.Entity<User>().ToTable("users");
+            builder.Entity<User>().HasKey(u => u.Id);
+            builder.Entity<User>().Property(u => u.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<User>().Property(u => u.Name).IsRequired();
+            builder.Entity<User>().Property(u => u.Email).IsRequired();
+            builder.Entity<User>().Property(u => u.Password).IsRequired();
+            builder.Entity<User>().Property(u => u.RegistrationDate).IsRequired();
+
             //apply SnakeCase Naming Convention
             builder.UseSnakeCaseWithPluralizedTableNamingConvention();
 
         }
     }
 }
+
