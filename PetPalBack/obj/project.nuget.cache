@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nbAUn6o1sUhYmA2Y/mPL9rGeY3e4m7ReOguhbll8y04wwKYs0HuJo65PPBhcFiGgBD4QfVsFzJd5oZ4cfZ+Yyw==",
+  "dgSpecHash": "42SEsE4zoBOFSd8tSafhdSxG0llOIOUQPpyj8r7KfzU4v0x5xGb6hAZeOt5OfJFVLgbjucKiGywkT3frJcFHvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\PetPalBack.csproj",
+  "projectFilePath": "D:\\U\\Ciclo 2024-01\\Aplicaciones Web\\Repositories\\petpal.API\\PetPalBack\\PetPalBack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PAOLO\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\PAOLO\\.nuget\\packages\\entityframeworkcore.createdupdateddate\\8.0.0\\entityframeworkcore.createdupdateddate.8.0.0.nupkg.sha512",
@@ -180,7 +180,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Se detectó una versión del paquete fuera de la restricción de dependencia: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requiere MediatR (>= 11.0.0 && < 12.0.0), pero la versión MediatR 12.3.0 ya se resolvió.",
+      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 12.3.0 was resolved.",
       "libraryId": "MediatR",
       "targetGraphs": [
         "net8.0"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\PetPalBack.csproj": {}
+    "D:\\U\\Ciclo 2024-01\\Aplicaciones Web\\Repositories\\petpal.API\\PetPalBack\\PetPalBack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\PetPalBack.csproj": {
+    "D:\\U\\Ciclo 2024-01\\Aplicaciones Web\\Repositories\\petpal.API\\PetPalBack\\PetPalBack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\PetPalBack.csproj",
+        "projectUniqueName": "D:\\U\\Ciclo 2024-01\\Aplicaciones Web\\Repositories\\petpal.API\\PetPalBack\\PetPalBack.csproj",
         "projectName": "PetPalBack",
-        "projectPath": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\PetPalBack.csproj",
+        "projectPath": "D:\\U\\Ciclo 2024-01\\Aplicaciones Web\\Repositories\\petpal.API\\PetPalBack\\PetPalBack.csproj",
         "packagesPath": "C:\\Users\\PAOLO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\obj\\",
+        "outputPath": "D:\\U\\Ciclo 2024-01\\Aplicaciones Web\\Repositories\\petpal.API\\PetPalBack\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
