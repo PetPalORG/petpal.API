@@ -1,4 +1,6 @@
-﻿namespace PetPalBack.Pet_Care.Domain.Model.Entities
+﻿using PetPalBack.Pet_Care.Domain.Model.Commands;
+
+namespace PetPalBack.Pet_Care.Domain.Model.Entities
 {
     public class Medication
     {
@@ -14,6 +16,14 @@
             this.Dosage = string.Empty;
             this.Frequency = string.Empty;
             this.Duration = string.Empty;
+        }
+
+        public Medication(CreateMedicationCommand command)
+        {
+            this.Name = command.Name;
+            this.Dosage = command.Dosage;
+            this.Frequency = command.Frequency;
+            this.Duration = command.Duration;
         }
     }
 }
