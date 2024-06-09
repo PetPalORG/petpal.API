@@ -1,58 +1,122 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\",
+  "WorkspaceRootPath": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\daniel\\downloads\\back\\prueba\\petpalback\\shared\\infrastructure\\persistance\\efc\\repositories\\baserespository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\infrastructure\\persistance\\efc\\repositories\\baserespository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\shared\\infrastructure\\persistance\\epc\\configuration\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\infrastructure\\persistance\\epc\\configuration\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\daniel\\downloads\\back\\prueba\\petpalback\\shared\\infrastructure\\persistance\\efc\\configurations\\appobcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\infrastructure\\persistance\\efc\\configurations\\appobcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\shared\\infrastructure\\persistance\\epc\\configuration\\extensions\\modelstateextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\infrastructure\\persistance\\epc\\configuration\\extensions\\modelstateextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\daniel\\downloads\\back\\prueba\\petpalback\\shared\\infrastructure\\persistance\\efc\\configurations\\extensions\\stringextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\infrastructure\\persistance\\efc\\configurations\\extensions\\stringextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\daniel\\downloads\\back\\prueba\\petpalback\\shared\\infrastructure\\persistance\\efc\\configurations\\extensions\\modelbuilderextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\infrastructure\\persistance\\efc\\configurations\\extensions\\modelbuilderextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\daniel\\downloads\\back\\prueba\\petpalback\\shared\\interfaces\\asp\\configurations\\kebabcaseroutenamingconvention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\interfaces\\asp\\configurations\\kebabcaseroutenamingconvention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\daniel\\downloads\\back\\prueba\\petpalback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\daniel\\downloads\\back\\prueba\\petpalback\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\daniel\\downloads\\back\\prueba\\petpalback\\shared\\domain\\repositories\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\domain\\repositories\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\profiles\\application\\internal\\commandservices\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:profiles\\application\\internal\\commandservices\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\daniel\\downloads\\back\\prueba\\petpalback\\shared\\domain\\repositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\profiles\\application\\internal\\commandservices\\loginusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:profiles\\application\\internal\\commandservices\\loginusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\profiles\\application\\internal\\queryservices\\getuserbyemailqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:profiles\\application\\internal\\queryservices\\getuserbyemailqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\profiles\\interfaces\\rest\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:profiles\\interfaces\\rest\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\profiles\\domain\\model\\commands\\loginusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:profiles\\domain\\model\\commands\\loginusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\profiles\\interfaces\\rest\\controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:profiles\\interfaces\\rest\\controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\profiles\\infraestructure\\persistence\\efc\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:profiles\\infraestructure\\persistence\\efc\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\profiles\\domain\\model\\commands\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:profiles\\domain\\model\\commands\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\profiles\\infraestructure\\persistence\\efc\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:profiles\\infraestructure\\persistence\\efc\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\profiles\\domain\\model\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:profiles\\domain\\model\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\shared\\infrastructure\\persistance\\epc\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\infrastructure\\persistance\\epc\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\profiles\\domain\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:profiles\\domain\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\profiles\\domain\\model\\queries\\getuserbyemailquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:profiles\\domain\\model\\queries\\getuserbyemailquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\profiles\\domain\\services\\iuserqueryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:profiles\\domain\\services\\iuserqueryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\profiles\\domain\\services\\iusercommandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:profiles\\domain\\services\\iusercommandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\shared\\domain\\repositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\domain\\repositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\daniel\\downloads\\back\\prueba\\petpalback\\shared\\infrastructure\\persistance\\efc\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\infrastructure\\persistance\\efc\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\shared\\domain\\repositories\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\domain\\repositories\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\daniel\\downloads\\back\\prueba\\petpalback\\shared\\interfaces\\asp\\configurations\\extensions\\stringextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\interfaces\\asp\\configurations\\extensions\\stringextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\petpalback.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:petpalback.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\daniel\\downloads\\back\\prueba\\petpalback\\shared\\interfaces\\asp\\configurations\\extensions\\modelstateextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\interfaces\\asp\\configurations\\extensions\\modelstateextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\shared\\infrastructure\\persistance\\epc\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\infrastructure\\persistance\\epc\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\daniel\\downloads\\back\\prueba\\petpalback\\petpalback.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\petpalback.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:petpalback.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\shared\\infrastructure\\persistance\\epc\\configuration\\extensions\\stringextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\infrastructure\\persistance\\epc\\configuration\\extensions\\stringextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\shared\\infrastructure\\persistance\\epc\\configuration\\extensions\\modelbuilderextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\infrastructure\\persistance\\epc\\configuration\\extensions\\modelbuilderextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\shared\\infrastructure\\interfaces\\asp\\configuration\\kebabcaseroutenamingconvention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\infrastructure\\interfaces\\asp\\configuration\\kebabcaseroutenamingconvention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\shared\\infrastructure\\interfaces\\asp\\configuration\\extensions\\stringextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\infrastructure\\interfaces\\asp\\configuration\\extensions\\stringextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|c:\\users\\paolo\\desktop\\petpal.api\\petpalback\\shared\\infrastructure\\interfaces\\asp\\configuration\\extensions\\modelstateextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AB9DAA0-4674-4646-BD20-AE5A7355ECCC}|PetPalBack.csproj|solutionrelative:shared\\infrastructure\\interfaces\\asp\\configuration\\extensions\\modelstateextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,180 +126,360 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegistrationController.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Interfaces\\REST\\Controllers\\RegistrationController.cs",
+              "RelativeDocumentMoniker": "Profiles\\Interfaces\\REST\\Controllers\\RegistrationController.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Interfaces\\REST\\Controllers\\RegistrationController.cs",
+              "RelativeToolTip": "Profiles\\Interfaces\\REST\\Controllers\\RegistrationController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABwAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T03:02:08.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Interfaces\\REST\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Profiles\\Interfaces\\REST\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Interfaces\\REST\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Profiles\\Interfaces\\REST\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T03:02:03.689Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ModelBuilderExtension.cs",
-              "DocumentMoniker": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Infrastructure\\Persistance\\EFC\\Configurations\\Extensions\\ModelBuilderExtension.cs",
-              "RelativeDocumentMoniker": "shared\\Infrastructure\\Persistance\\EFC\\Configurations\\Extensions\\ModelBuilderExtension.cs",
-              "ToolTip": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Infrastructure\\Persistance\\EFC\\Configurations\\Extensions\\ModelBuilderExtension.cs",
-              "RelativeToolTip": "shared\\Infrastructure\\Persistance\\EFC\\Configurations\\Extensions\\ModelBuilderExtension.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA1AAAA",
+              "Title": "CreateUserCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Application\\Internal\\CommandServices\\CreateUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "Profiles\\Application\\Internal\\CommandServices\\CreateUserCommandHandler.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Application\\Internal\\CommandServices\\CreateUserCommandHandler.cs",
+              "RelativeToolTip": "Profiles\\Application\\Internal\\CommandServices\\CreateUserCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:21:48.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T03:02:17.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Infraestructure\\Persistence\\EFC\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Profiles\\Infraestructure\\Persistence\\EFC\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Infraestructure\\Persistence\\EFC\\UserRepository.cs",
+              "RelativeToolTip": "Profiles\\Infraestructure\\Persistence\\EFC\\UserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T06:17:37.916Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "KebabCaseRouteNamingConvention.cs",
-              "DocumentMoniker": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Interfaces\\ASP\\Configurations\\KebabCaseRouteNamingConvention.cs",
-              "RelativeDocumentMoniker": "shared\\Interfaces\\ASP\\Configurations\\KebabCaseRouteNamingConvention.cs",
-              "ToolTip": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Interfaces\\ASP\\Configurations\\KebabCaseRouteNamingConvention.cs",
-              "RelativeToolTip": "shared\\Interfaces\\ASP\\Configurations\\KebabCaseRouteNamingConvention.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Title": "LoginUserCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Application\\Internal\\CommandServices\\LoginUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "Profiles\\Application\\Internal\\CommandServices\\LoginUserCommandHandler.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Application\\Internal\\CommandServices\\LoginUserCommandHandler.cs",
+              "RelativeToolTip": "Profiles\\Application\\Internal\\CommandServices\\LoginUserCommandHandler.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T23:02:01.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T03:02:14.553Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "StringExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Infrastructure\\Persistance\\EFC\\Configurations\\Extensions\\StringExtensions.cs",
-              "RelativeDocumentMoniker": "shared\\Infrastructure\\Persistance\\EFC\\Configurations\\Extensions\\StringExtensions.cs",
-              "ToolTip": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Infrastructure\\Persistance\\EFC\\Configurations\\Extensions\\StringExtensions.cs",
-              "RelativeToolTip": "shared\\Infrastructure\\Persistance\\EFC\\Configurations\\Extensions\\StringExtensions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAVAAAA",
+              "DocumentIndex": 5,
+              "Title": "GetUserByEmailQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Application\\Internal\\QueryServices\\GetUserByEmailQueryHandler.cs",
+              "RelativeDocumentMoniker": "Profiles\\Application\\Internal\\QueryServices\\GetUserByEmailQueryHandler.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Application\\Internal\\QueryServices\\GetUserByEmailQueryHandler.cs",
+              "RelativeToolTip": "Profiles\\Application\\Internal\\QueryServices\\GetUserByEmailQueryHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:21:43.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T03:02:23.523Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppObContext.cs",
-              "DocumentMoniker": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Infrastructure\\Persistance\\EFC\\Configurations\\AppObContext.cs",
-              "RelativeDocumentMoniker": "shared\\Infrastructure\\Persistance\\EFC\\Configurations\\AppObContext.cs",
-              "ToolTip": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Infrastructure\\Persistance\\EFC\\Configurations\\AppObContext.cs",
-              "RelativeToolTip": "shared\\Infrastructure\\Persistance\\EFC\\Configurations\\AppObContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAPAAAA",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\AppDbContext.cs",
+              "RelativeToolTip": "Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T00:21:36.565Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BaseRespository.cs",
-              "DocumentMoniker": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Infrastructure\\Persistance\\EFC\\Repositories\\BaseRespository.cs",
-              "RelativeDocumentMoniker": "shared\\Infrastructure\\Persistance\\EFC\\Repositories\\BaseRespository.cs",
-              "ToolTip": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Infrastructure\\Persistance\\EFC\\Repositories\\BaseRespository.cs",
-              "RelativeToolTip": "shared\\Infrastructure\\Persistance\\EFC\\Repositories\\BaseRespository.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBsAAAAJAAAA",
+              "DocumentIndex": 1,
+              "Title": "ModelStateExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\Extensions\\ModelStateExtensions.cs",
+              "RelativeDocumentMoniker": "Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\Extensions\\ModelStateExtensions.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\Extensions\\ModelStateExtensions.cs",
+              "RelativeToolTip": "Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\Extensions\\ModelStateExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T23:20:10.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Infrastructure\\Persistance\\EFC\\Repositories\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "shared\\Infrastructure\\Persistance\\EFC\\Repositories\\UnitOfWork.cs",
-              "ToolTip": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Infrastructure\\Persistance\\EFC\\Repositories\\UnitOfWork.cs",
-              "RelativeToolTip": "shared\\Infrastructure\\Persistance\\EFC\\Repositories\\UnitOfWork.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T23:26:00.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IBaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Domain\\Repositories\\IBaseRepository.cs",
-              "RelativeDocumentMoniker": "shared\\Domain\\Repositories\\IBaseRepository.cs",
-              "ToolTip": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Domain\\Repositories\\IBaseRepository.cs",
-              "RelativeToolTip": "shared\\Domain\\Repositories\\IBaseRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T23:45:21.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Domain\\Repositories\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "shared\\Domain\\Repositories\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Domain\\Repositories\\IUnitOfWork.cs",
-              "RelativeToolTip": "shared\\Domain\\Repositories\\IUnitOfWork.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:17:13.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T03:03:44.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T08:59:05.181Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T23:01:55.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\appsettings.json",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAARAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-30T03:00:59.361Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T03:00:59.361Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "StringExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Interfaces\\ASP\\Configurations\\Extensions\\StringExtensions.cs",
-              "RelativeDocumentMoniker": "shared\\Interfaces\\ASP\\Configurations\\Extensions\\StringExtensions.cs",
-              "ToolTip": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Interfaces\\ASP\\Configurations\\Extensions\\StringExtensions.cs",
-              "RelativeToolTip": "shared\\Interfaces\\ASP\\Configurations\\Extensions\\StringExtensions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAABAAAA",
+              "Title": "RegisterController.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Infraestructure\\Persistence\\EFC\\RegisterController.cs",
+              "RelativeDocumentMoniker": "Profiles\\Infraestructure\\Persistence\\EFC\\RegisterController.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Infraestructure\\Persistence\\EFC\\RegisterController.cs",
+              "RelativeToolTip": "Profiles\\Infraestructure\\Persistence\\EFC\\RegisterController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T23:00:04.456Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T06:47:25.367Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "ModelStateExtension.cs",
-              "DocumentMoniker": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Interfaces\\ASP\\Configurations\\Extensions\\ModelStateExtension.cs",
-              "RelativeDocumentMoniker": "shared\\Interfaces\\ASP\\Configurations\\Extensions\\ModelStateExtension.cs",
-              "ToolTip": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\shared\\Interfaces\\ASP\\Configurations\\Extensions\\ModelStateExtension.cs",
-              "RelativeToolTip": "shared\\Interfaces\\ASP\\Configurations\\Extensions\\ModelStateExtension.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
+              "Title": "CreateUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Domain\\Model\\Commands\\CreateUserCommand.cs",
+              "RelativeDocumentMoniker": "Profiles\\Domain\\Model\\Commands\\CreateUserCommand.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Domain\\Model\\Commands\\CreateUserCommand.cs",
+              "RelativeToolTip": "Profiles\\Domain\\Model\\Commands\\CreateUserCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T22:38:20.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T03:02:28.407Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PetPalBack.csproj",
-              "DocumentMoniker": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\PetPalBack.csproj",
-              "RelativeDocumentMoniker": "PetPalBack.csproj",
-              "ToolTip": "C:\\Users\\daniel\\Downloads\\back\\prueba\\PetPalBack\\PetPalBack.csproj",
-              "RelativeToolTip": "PetPalBack.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-29T22:04:24.863Z",
-              "EditorCaption": ""
+              "DocumentIndex": 8,
+              "Title": "LoginUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Domain\\Model\\Commands\\LoginUserCommand.cs",
+              "RelativeDocumentMoniker": "Profiles\\Domain\\Model\\Commands\\LoginUserCommand.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Domain\\Model\\Commands\\LoginUserCommand.cs",
+              "RelativeToolTip": "Profiles\\Domain\\Model\\Commands\\LoginUserCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T03:02:38.25Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Domain\\Model\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Profiles\\Domain\\Model\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Domain\\Model\\Entities\\User.cs",
+              "RelativeToolTip": "Profiles\\Domain\\Model\\Entities\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T03:02:40.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IUserQueryService.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Domain\\Services\\IUserQueryService.cs",
+              "RelativeDocumentMoniker": "Profiles\\Domain\\Services\\IUserQueryService.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Domain\\Services\\IUserQueryService.cs",
+              "RelativeToolTip": "Profiles\\Domain\\Services\\IUserQueryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T07:25:12.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GetUserByEmailQuery.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Domain\\Model\\Queries\\GetUserByEmailQuery.cs",
+              "RelativeDocumentMoniker": "Profiles\\Domain\\Model\\Queries\\GetUserByEmailQuery.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Domain\\Model\\Queries\\GetUserByEmailQuery.cs",
+              "RelativeToolTip": "Profiles\\Domain\\Model\\Queries\\GetUserByEmailQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T03:02:42.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Persistance\\EPC\\Repositories\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "Shared\\Infrastructure\\Persistance\\EPC\\Repositories\\BaseRepository.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Persistance\\EPC\\Repositories\\BaseRepository.cs",
+              "RelativeToolTip": "Shared\\Infrastructure\\Persistance\\EPC\\Repositories\\BaseRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T23:20:10.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Domain\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Profiles\\Domain\\Repositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Domain\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "Profiles\\Domain\\Repositories\\IUserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T03:04:22.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IUserCommandService.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Domain\\Services\\IUserCommandService.cs",
+              "RelativeDocumentMoniker": "Profiles\\Domain\\Services\\IUserCommandService.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Profiles\\Domain\\Services\\IUserCommandService.cs",
+              "RelativeToolTip": "Profiles\\Domain\\Services\\IUserCommandService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T07:25:02.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Domain\\Repositories\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Shared\\Domain\\Repositories\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Domain\\Repositories\\IUnitOfWork.cs",
+              "RelativeToolTip": "Shared\\Domain\\Repositories\\IUnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T00:17:13.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IBaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Domain\\Repositories\\IBaseRepository.cs",
+              "RelativeDocumentMoniker": "Shared\\Domain\\Repositories\\IBaseRepository.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Domain\\Repositories\\IBaseRepository.cs",
+              "RelativeToolTip": "Shared\\Domain\\Repositories\\IBaseRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T23:45:21.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PetPalBack.http",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\PetPalBack.http",
+              "RelativeDocumentMoniker": "PetPalBack.http",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\PetPalBack.http",
+              "RelativeToolTip": "PetPalBack.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-06-08T21:45:35.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Persistance\\EPC\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Shared\\Infrastructure\\Persistance\\EPC\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Persistance\\EPC\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "Shared\\Infrastructure\\Persistance\\EPC\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T23:26:00.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PetPalBack.csproj",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\PetPalBack.csproj",
+              "RelativeDocumentMoniker": "PetPalBack.csproj",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\PetPalBack.csproj",
+              "RelativeToolTip": "PetPalBack.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAewAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-29T22:04:24.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "StringExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\Extensions\\StringExtensions.cs",
+              "RelativeDocumentMoniker": "Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\Extensions\\StringExtensions.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\Extensions\\StringExtensions.cs",
+              "RelativeToolTip": "Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\Extensions\\StringExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T00:21:43.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "KebabCaseRouteNamingConvention.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Interfaces\\ASP\\Configuration\\KebabCaseRouteNamingConvention.cs",
+              "RelativeDocumentMoniker": "Shared\\Infrastructure\\Interfaces\\ASP\\Configuration\\KebabCaseRouteNamingConvention.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Interfaces\\ASP\\Configuration\\KebabCaseRouteNamingConvention.cs",
+              "RelativeToolTip": "Shared\\Infrastructure\\Interfaces\\ASP\\Configuration\\KebabCaseRouteNamingConvention.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T23:02:01.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ModelBuilderExtension.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\Extensions\\ModelBuilderExtension.cs",
+              "RelativeDocumentMoniker": "Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\Extensions\\ModelBuilderExtension.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\Extensions\\ModelBuilderExtension.cs",
+              "RelativeToolTip": "Shared\\Infrastructure\\Persistance\\EPC\\Configuration\\Extensions\\ModelBuilderExtension.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T00:21:48.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "StringExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Interfaces\\ASP\\Configuration\\Extensions\\StringExtensions.cs",
+              "RelativeDocumentMoniker": "Shared\\Infrastructure\\Interfaces\\ASP\\Configuration\\Extensions\\StringExtensions.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Interfaces\\ASP\\Configuration\\Extensions\\StringExtensions.cs",
+              "RelativeToolTip": "Shared\\Infrastructure\\Interfaces\\ASP\\Configuration\\Extensions\\StringExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T23:00:04.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ModelStateExtension.cs",
+              "DocumentMoniker": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Interfaces\\ASP\\Configuration\\Extensions\\ModelStateExtension.cs",
+              "RelativeDocumentMoniker": "Shared\\Infrastructure\\Interfaces\\ASP\\Configuration\\Extensions\\ModelStateExtension.cs",
+              "ToolTip": "C:\\Users\\PAOLO\\Desktop\\petpal.API\\PetPalBack\\Shared\\Infrastructure\\Interfaces\\ASP\\Configuration\\Extensions\\ModelStateExtension.cs",
+              "RelativeToolTip": "Shared\\Infrastructure\\Interfaces\\ASP\\Configuration\\Extensions\\ModelStateExtension.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T22:38:20.153Z"
             }
           ]
         }
