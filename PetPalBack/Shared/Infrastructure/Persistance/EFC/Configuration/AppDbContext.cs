@@ -1,8 +1,7 @@
 ﻿using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
 using PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations.Extensions;
 using Microsoft.EntityFrameworkCore;
-using PetPalBack.PetRegister.Domain.Model.Aggregates;
-using PetPalBack.Domain.Model.Entities;
+using PetPalBack.Articles.Domain.Model.Aggregates;
 
 namespace PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations
 {
@@ -18,7 +17,15 @@ namespace PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations
         {
             base.OnModelCreating(builder);
 
-           
+            builder.Entity<Article>().ToTable("articles");
+            builder.Entity<Article>().HasKey(a => a.id);
+            builder.Entity<Article>().Property(a => a.id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Article>().Property(a => a.title).IsRequired();
+            builder.Entity<Article>().Property(a => a.content).IsRequired();
+            builder.Entity<Article>().Property(a => a.author).IsRequired();
+            builder.Entity<Article>().Property(a => a.date).IsRequired();
+            builder.Entity<Article>().Property(a => a.imagePath).IsRequired();
+            builder.Entity<Article>().Property(a => a.authorImage).IsRequired();
 
             //apply SnakeCase Naming Convention
             builder.UseSnakeCaseWithPluralizedTableNamingConvention();

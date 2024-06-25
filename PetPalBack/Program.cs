@@ -1,4 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using PetPalBack.Articles.Application.Internal.CommandServices;
+using PetPalBack.Articles.Application.Internal.QueryServices;
+using PetPalBack.Articles.Domain.Repositories;
+using PetPalBack.Articles.Domain.Services;
+using PetPalBack.Articles.Infrastructure.Persistence.EFC.Repositories;
 using PetPalBack.shared.Domain.Repositories;
 using PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations;
 using PetPalBack.shared.Infrastructure.Persistance.EFC.Repositories;
@@ -60,7 +65,10 @@ builder.Services.AddControllers(option =>
 //Shares Bounded Context Injection Configuration
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-/// News Bounded Context Infection Configuration
+// Articles Bounded Context Infection Configuration
+builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
+builder.Services.AddScoped<IArticleCommandService, ArticleCommandService>();
+builder.Services.AddScoped<IArticleQueryService, ArticleQueryService>();
 
 //Configure Kebab Case Route Naming Convention
 builder.Services.AddControllers(option =>
