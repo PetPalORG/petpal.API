@@ -69,28 +69,13 @@ builder.Services.AddControllers(option =>
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 /// News Bounded Context Infection Configuration
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IPetRepository, PetRepository>();
-builder.Services.AddScoped<IPetCommandService, PetCommandService>();
-builder.Services.AddScoped<IPetQueryService, PetQueryService>();
+
 //Configure Kebab Case Route Naming Convention
 builder.Services.AddControllers(option =>
 {
     option.Conventions.Add(new KebabCaseRouteNamingConvention());
 });
 
-
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<Program>());
-
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll", builder =>
-    {
-        builder.AllowAnyOrigin()
-               .AllowAnyMethod()
-               .AllowAnyHeader();
-    });
-});
 
 var app = builder.Build();
 
@@ -113,7 +98,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowAll");
+
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
