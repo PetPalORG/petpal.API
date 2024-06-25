@@ -1,6 +1,7 @@
 ﻿using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
 using PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations.Extensions;
 using Microsoft.EntityFrameworkCore;
+using PetPalBack.IAM.Domain.Model.Aggregates;
 
 namespace PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations
 {
@@ -16,13 +17,10 @@ namespace PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations
         {
             base.OnModelCreating(builder);
 
-            /***
-             * 
-             * 
-             * 
-             * 
-             * 
-             */
+            builder.Entity<User>().HasKey(u => u.Id);
+            builder.Entity<User>().Property(u => u.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<User>().Property(u => u.Username).IsRequired();
+            builder.Entity<User>().Property(u => u.PasswordHash).IsRequired();
 
             //apply SnakeCase Naming Convention
             builder.UseSnakeCaseWithPluralizedTableNamingConvention();
