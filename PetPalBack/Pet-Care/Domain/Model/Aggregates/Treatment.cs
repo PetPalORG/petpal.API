@@ -13,11 +13,12 @@ namespace PetPalBack.Pet_Care.Domain.Model.Aggregates
         public Appointment appointment { get; set; }
         public TreatmentDetail treatmentDetail { get; set; }
 
-        protected Treatment()
+        public Treatment(string Diagnosis, DateTime StartDate, DateTime EndDate, int appointmentId)
         {
-            this.Diagnosis = string.Empty;
-            this.StartDate = DateTime.Now;
-            this.EndDate = DateTime.Now;
+            this.Diagnosis = Diagnosis;
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
+            this.appointmentId = appointmentId;
         }
 
         public Treatment(CreateTreatmentCommand command)
@@ -26,16 +27,6 @@ namespace PetPalBack.Pet_Care.Domain.Model.Aggregates
             this.StartDate = command.StartDate;
             this.EndDate = command.EndDate;
             this.appointmentId = command.AppointmentId;
-        }
-
-        public int getId()
-        {
-            return this.Id;
-        }
-
-        public void SetAppointment(int appointmentId)
-        {
-            this.appointmentId = appointmentId;
         }
     }
 }

@@ -14,24 +14,25 @@ namespace PetPalBack.Pet_Care.Interfaces.REST
     public class TreatmentController(ITreatmentCommandService treatmentCommandService, ITreatmentQueryService treatmentQueryService): ControllerBase
     {
         [HttpPost]
-        public async Task<ActionResult> CreateTreatment([FromBody] CreateTreatmentResource resource)
+        public async Task<ActionResult> CreateTreatment([FromBody] CreateTreatmentResource createTreatmentResource)
         {
-            var createTreatmentCommand = CreateTreatmentCommandFromResourceAssembler.ToCommandFromResource(resource);
+            var createTreatmentCommand = CreateTreatmentCommandFromResourceAssembler.ToCommandFromResource(createTreatmentResource);
             var result = await treatmentCommandService.Handle(createTreatmentCommand);
             if (result is null) return BadRequest();
-            return CreatedAtAction(nameof(GetTreatmentById), new { id = result.Id }, TreatmentResourceFromEntityAssembler.ToResourceFromEntity(result));
+            var resource = TreatmentResourceFromEntityAssembler.ToResourceFromEntity(result);
+            return CreatedAtAction(nameof(GetTreatmentById), new { id = result.Id }, resource);
         }
         [HttpGet("id/{id}")]
-        public async Task<ActionResult> GetTreatmentById(int id)
+        public async Task<ActionResult> GetTreatmentById([FromRoute] int id)
         {
-            var getTreatmentByIdQuery = new GetTreatmentById(id);
+            var getTreatmentByIdQuery = new GetTreatmentByIdQuery(id);
             var result = await treatmentQueryService.Handle(getTreatmentByIdQuery);
             if (result is null) return NotFound();
             var resource = TreatmentResourceFromEntityAssembler.ToResourceFromEntity(result);
             return Ok(resource);
         }
         [HttpDelete("id/{id}")]
-        public async Task<ActionResult> DeleteTreatment(int id)
+        public async Task<ActionResult> DeleteTreatment([FromRoute] int id)
         {
             try
             {

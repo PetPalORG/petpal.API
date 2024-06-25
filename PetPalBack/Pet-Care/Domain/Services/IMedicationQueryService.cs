@@ -5,6 +5,6 @@ namespace PetPalBack.Pet_Care.Domain.Services
 {
     public interface IMedicationQueryService
     {
-        Task<Medication?> Handle(GetMedicationById query);
+        Task<Medication?> Handle(GetMedicationByIdQuery query);
     }
 }

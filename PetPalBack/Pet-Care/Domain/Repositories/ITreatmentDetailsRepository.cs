@@ -5,5 +5,6 @@ namespace PetPalBack.Pet_Care.Domain.Repositories
 {
     public interface ITreatmentDetailsRepository: IBaseRepository<TreatmentDetail>
     {
+        Task<TreatmentDetail?> FindByTreatmentIdAsync(int treatmentId);
     }
 }

@@ -19,7 +19,7 @@ namespace PetPalBack.Shared.Infrastructure.Persistance.EPC.Configuration
         {
             base.OnModelCreating(builder);
 
-            builder.Entity<Pet>().ToTable("Pets");
+            
             builder.Entity<Pet>().HasKey(p => p.Id);
             builder.Entity<Pet>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Pet>().Property(p => p.Name).IsRequired();
@@ -28,29 +28,42 @@ namespace PetPalBack.Shared.Infrastructure.Persistance.EPC.Configuration
             builder.Entity<Pet>().Property(p => p.BirthDate).IsRequired();
             builder.Entity<Pet>().Property(p => p.Weight).IsRequired();
 
-            builder.Entity<Appointment>().ToTable("Appointments");
+            
             builder.Entity<Appointment>().HasKey(a => a.id);
             builder.Entity<Appointment>().Property(a => a.id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Appointment>().Property(a => a.reason).IsRequired();
             builder.Entity<Appointment>().Property(a => a.date).IsRequired();
 
-            builder.Entity<Appointment>().HasOne<Pet>(a => a.pet)
+            builder.Entity<Appointment>()
+                .HasOne(a => a.pet)
                 .WithMany(p => p.Appointments)
-                .HasForeignKey(a => a.petId);
+                .HasForeignKey(a => a.petId)
+                .HasPrincipalKey(p => p.Id);
 
-            builder.Entity<Appointment>().HasOne(a => a.treatment)
+            builder.Entity<Appointment>()
+                .HasOne(a => a.treatment)
                 .WithOne(t => t.appointment)
-                .HasForeignKey<Treatment>(t => t.appointmentId);
+                .HasForeignKey<Treatment>(t => t.appointmentId)
+                .HasPrincipalKey<Appointment>(a => a.id);
+
+            builder.Entity<Diet>()
+                .HasOne(d => d.pet)
+                .WithMany(p => p.diet)
+                .HasForeignKey(d => d.petId)
+                .HasPrincipalKey(p => p.Id);
+
 
             builder.Entity<Treatment>()
-        .HasOne(t => t.treatmentDetail)
-        .WithOne(td => td.treatment)
-        .HasForeignKey<TreatmentDetail>(td => td.treatmentId);
+                .HasOne(t => t.treatmentDetail)
+                .WithOne(td => td.treatment)
+                .HasForeignKey<TreatmentDetail>(td => td.treatmentId)
+                .HasPrincipalKey<Treatment>(t => t.Id);
 
-            builder.Entity<TreatmentDetail>()
-                .HasOne(td => td.medication)
-                .WithOne(m => m.treatmentDetail)
-                .HasForeignKey<Medication>(m => m.treatmentDetailId);
+            builder.Entity<Medication>()
+                .HasOne(m => m.treatmentDetail)
+                .WithOne(td => td.medication)
+                .HasForeignKey<TreatmentDetail>(td => td.medicationId)
+                .HasPrincipalKey<Medication>(m => m.Id);
 
 
             //apply SnakeCase Naming Convention

@@ -11,27 +11,37 @@ namespace PetPalBack.Pet_Care.Interfaces.REST
     [ApiController]
     [Route("api/v1/[controller]")]
     [Produces(MediaTypeNames.Application.Json)]
-    public class AppointmentController(IAppointmentCommandService appointmentCommandService, IAppointmentQueryService appointmentQueryService): ControllerBase
+    public class AppointmentsController(IAppointmentCommandService appointmentCommandService, IAppointmentQueryService appointmentQueryService): ControllerBase
     {
         [HttpPost]
-        public async Task<ActionResult> CreateAppointment([FromBody] CreateAppointmentResource resource)
+        public async Task<ActionResult> CreateAppointment([FromBody] CreateAppointmentResource createAppointmentResource)
         {
-            var createAppointmentCommand = CreateAppointmentCommandFromResourceAssembler.ToCommandFromResource(resource);
+            var createAppointmentCommand = CreateAppointmentCommandFromResourceAssembler.ToCommandFromResource(createAppointmentResource);
             var result = await appointmentCommandService.Handle(createAppointmentCommand);
             if (result is null) return BadRequest();
-            return CreatedAtAction(nameof(GetAppointmentById), new { id = result.id }, AppointmentResourceFromEntityAssembler.ToResourceFromEntity(result));
+            var resource = AppointmentResourceFromEntityAssembler.ToResourceFromEntity(result);
+            return CreatedAtAction(nameof(GetAppointmentById), new { id = result.id }, resource);
         }
-        [HttpGet("id/{id}")]
-        public async Task<ActionResult> GetAppointmentById(int id)
+        [HttpGet]
+        public async Task<ActionResult> GetAllAppointments()
         {
-            var getAppointmentByIdQuery = new GetAppointmentById(id);
+            var getAllAppointmentsQuery = new GetAllAppointmentsQuery();
+            var appointments = await appointmentQueryService.Handle(getAllAppointmentsQuery);
+            var resources = appointments.Select(AppointmentResourceFromEntityAssembler.ToResourceFromEntity);
+            return Ok(resources);
+        }
+
+        [HttpGet("id/{id}")]
+        public async Task<ActionResult> GetAppointmentById([FromRoute] int id)
+        {
+            var getAppointmentByIdQuery = new GetAppointmentByIdQuery(id);
             var result = await appointmentQueryService.Handle(getAppointmentByIdQuery);
             if (result is null) return NotFound();
             var resource = AppointmentResourceFromEntityAssembler.ToResourceFromEntity(result);
             return Ok(resource);
         }
         [HttpDelete("id/{id}")]
-        public async Task<ActionResult> DeleteAppointment(int id)
+        public async Task<ActionResult> DeleteAppointment([FromRoute] int id)
         {
             try
             {

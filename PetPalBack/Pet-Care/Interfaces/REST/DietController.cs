@@ -14,24 +14,25 @@ namespace PetPalBack.Pet_Care.Interfaces.REST
     public class DietController(IDietCommandService dietCommandService, IDietQueryService dietQueryService): ControllerBase
     {
         [HttpPost]
-        public async Task<ActionResult> CreateDiet([FromBody] CreateDietResource resource)
+        public async Task<ActionResult> CreateDiet([FromBody] CreateDietResource createDietResource)
         {
-            var createDietCommand = CreateDietCommandFromResourceAssembler.ToCommandFromResource(resource);
+            var createDietCommand = CreateDietCommandFromResourceAssembler.ToCommandFromResource(createDietResource);
             var result = await dietCommandService.Handle(createDietCommand);
             if (result is null) return BadRequest();
-            return CreatedAtAction(nameof(GetDietById), new { id = result.Id }, DietResourceFromEntityAssembler.ToResourceFromEntity(result));
+            var resource = DietResourceFromEntityAssembler.ToResourceFromEntity(result);
+            return CreatedAtAction(nameof(GetDietById), new { id = result.Id }, resource);
         }
         [HttpGet("id/{id}")]
-        public async Task<ActionResult> GetDietById(int id)
+        public async Task<ActionResult> GetDietById([FromRoute] int id)
         {
-            var getDietByIdQuery = new GetDietById(id);
+            var getDietByIdQuery = new GetDietByIdQuery(id);
             var result = await dietQueryService.Handle(getDietByIdQuery);
             if (result is null) return NotFound();
             var resource = DietResourceFromEntityAssembler.ToResourceFromEntity(result);
             return Ok(resource);
         }
         [HttpDelete("id/{id}")]
-        public async Task<ActionResult> DeleteDiet(int id)
+        public async Task<ActionResult> DeleteDiet([FromRoute] int id)
         {
             try
             {

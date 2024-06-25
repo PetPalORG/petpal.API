@@ -1,5 +1,6 @@
 ﻿using PetPalBack.Pet_Care.Domain.Model.Commands;
 using PetPalBack.Pet_Care.Domain.Model.Entities;
+using PetPalBack.Pet_Care.Domain.Model.Queries;
 
 namespace PetPalBack.Pet_Care.Domain.Model.Aggregates
 {
@@ -11,16 +12,17 @@ namespace PetPalBack.Pet_Care.Domain.Model.Aggregates
         public string Breed { get; set; }
         public DateTime BirthDate { get; set; }
         public double Weight { get; set; }
-        public List<Appointment> Appointments { get; set; } = new List<Appointment>();
+        public IEnumerable<Appointment> Appointments { get; set; }
+        public IEnumerable<Diet> diet { get; set; }
 
-        protected Pet()
+        public Pet(string Name, string Species, string Breed, DateTime BirthDate, double Weight)
         {
-            this.Name = string.Empty;
-            this.Species = string.Empty;
-            this.Breed = string.Empty;
-            this.BirthDate = DateTime.Now;
-            this.Weight = 0;
-            
+            this.Name = Name;
+            this.Species = Species;
+            this.Breed = Breed;
+            this.BirthDate = BirthDate;
+            this.Weight = Weight;
+
         }
 
         public Pet(CreatePetCommand command)

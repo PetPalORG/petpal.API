@@ -14,24 +14,25 @@ namespace PetPalBack.Pet_Care.Interfaces.REST
     public class TreatmentDetailController(ITreatmentDetailsCommandService treatmentDetailsCommandService, ITreatmentDetailQueryService treatmentDetailQueryService): ControllerBase
     {
         [HttpPost]
-        public async Task<ActionResult> CreateTreatmentDetail([FromBody] CreateTreatmentDetailsResource resource)
+        public async Task<ActionResult> CreateTreatmentDetail([FromBody] CreateTreatmentDetailsResource createTreatmentDetailsResource)
         {
-            var createTreatmentDetailCommand = CreateTreatmentDetailsCommandFromResourceAssembler.ToCommandFromResource(resource);
+            var createTreatmentDetailCommand = CreateTreatmentDetailsCommandFromResourceAssembler.ToCommandFromResource(createTreatmentDetailsResource);
             var result = await treatmentDetailsCommandService.Handle(createTreatmentDetailCommand);
             if (result is null) return BadRequest();
-            return CreatedAtAction(nameof(GetTreatmentDetailById), new { id = result.id }, TreatmentDetailsResourceFromEntityAssembler.ToResourceFromEntity(result));
+            var resource = TreatmentDetailsResourceFromEntityAssembler.ToResourceFromEntity(result);
+            return CreatedAtAction(nameof(GetTreatmentDetailById), new { Id = result.id }, resource);
         }
         [HttpGet("id/{id}")]
-        public async Task<ActionResult> GetTreatmentDetailById(int id)
+        public async Task<ActionResult> GetTreatmentDetailById([FromRoute] int id)
         {
-            var getTreatmentDetailByIdQuery = new GetTreatmentDetailById(id);
+            var getTreatmentDetailByIdQuery = new GetTreatmentDetailByIdQuery(id);
             var result = await treatmentDetailQueryService.Handle(getTreatmentDetailByIdQuery);
             if (result is null) return NotFound();
             var resource = TreatmentDetailsResourceFromEntityAssembler.ToResourceFromEntity(result);
             return Ok(resource);
         }
         [HttpDelete("id/{id}")]
-        public async Task<ActionResult> DeleteTreatmentDetail(int id)
+        public async Task<ActionResult> DeleteTreatmentDetail([FromRoute] int id)
         {
             try
             {

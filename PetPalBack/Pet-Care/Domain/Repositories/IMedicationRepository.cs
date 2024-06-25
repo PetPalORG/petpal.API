@@ -3,7 +3,7 @@ using PetPalBack.Shared.Domain.Repositories;
 
 namespace PetPalBack.Pet_Care.Domain.Repositories
 {
-    public interface IMedicationRepository: IBaseRepository<Medication>
-    {
+    public interface IMedicationRepository : IBaseRepository<Medication>
+    { 
     }
 }

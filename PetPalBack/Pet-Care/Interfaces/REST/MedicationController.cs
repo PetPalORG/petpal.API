@@ -17,24 +17,25 @@ namespace PetPalBack.Pet_Care.Interfaces.REST
     ) : ControllerBase
     {
         [HttpPost]
-        public async Task<ActionResult> CreateMedication([FromBody] CreateMedicationResource resource)
+        public async Task<ActionResult> CreateMedication([FromBody] CreateMedicationResource createMedicationResource)
         {
-            var createMedicationCommand = CreateMedicationCommandFromResourceAssembler.ToCommandFromResource(resource);
+            var createMedicationCommand = CreateMedicationCommandFromResourceAssembler.ToCommandFromResource(createMedicationResource);
             var result = await medicationCommandService.Handle(createMedicationCommand);
             if (result is null) return BadRequest();
-            return CreatedAtAction(nameof(GetMedicationById), new { id = result.Id }, MedicationResourceFromEntityAssembler.ToResourceFromEntity(result));
+            var resource = MedicationResourceFromEntityAssembler.ToResourceFromEntity(result);
+            return CreatedAtAction(nameof(GetMedicationById), new { id = result.Id }, resource);
         }
         [HttpGet("id/{id}")]
-        public async Task<ActionResult> GetMedicationById(int id)
+        public async Task<ActionResult> GetMedicationById([FromRoute] int id)
         {
-            var getMedicationByIdQuery = new GetMedicationById(id);
+            var getMedicationByIdQuery = new GetMedicationByIdQuery(id);
             var result = await medicationQueryService.Handle(getMedicationByIdQuery);
             if (result is null) return NotFound();
             var resource = MedicationResourceFromEntityAssembler.ToResourceFromEntity(result);
             return Ok(resource);
         }
         [HttpDelete("id/{id}")]
-        public async Task<ActionResult> DeleteMedication(int id)
+        public async Task<ActionResult> DeleteMedication([FromRoute] int id)
         {
             try
             {

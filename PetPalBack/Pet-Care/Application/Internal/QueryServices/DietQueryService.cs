@@ -7,9 +7,14 @@ namespace PetPalBack.Pet_Care.Application.Internal.QueryServices
 {
     public class DietQueryService(IDietRepository dietRepository): IDietQueryService
     {
-        public async Task<Diet?> Handle(GetDietById query)
+        public async Task<Diet?> Handle(GetDietByIdQuery query)
         {
             return await dietRepository.FindByIdAsync(query.id);
+        }
+
+        public async Task<IEnumerable<Diet>> Handle(GetDietByPetIdQuery query)
+        {
+            return await dietRepository.FindByPetIdAsync(query.petId);
         }
     }
 }

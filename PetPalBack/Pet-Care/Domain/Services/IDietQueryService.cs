@@ -5,6 +5,7 @@ namespace PetPalBack.Pet_Care.Domain.Services
 {
     public interface IDietQueryService
     {
-        Task<Diet?> Handle(GetDietById qurry);
+        Task<Diet?> Handle(GetDietByIdQuery query);
+        Task<IEnumerable<Diet>> Handle(GetDietByPetIdQuery query);
     }
 }

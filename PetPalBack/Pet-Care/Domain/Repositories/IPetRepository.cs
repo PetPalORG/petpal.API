@@ -5,6 +5,7 @@ namespace PetPalBack.Pet_Care.Domain.Repositories
 {
     public interface IPetRepository : IBaseRepository<Pet>
     {
-        Task<Pet?> FindByNameAsync(string Name);
+        Task<Pet?> FindByNameAsync(string name);
+        
     }
 }

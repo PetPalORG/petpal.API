@@ -7,7 +7,7 @@ namespace PetPalBack.Pet_Care.Interfaces.REST.Transformers
     {
         public static CreateTreatmentDetailsCommand ToCommandFromResource(CreateTreatmentDetailsResource resource)
         {
-            return new CreateTreatmentDetailsCommand(resource.treatmentId);
+            return new CreateTreatmentDetailsCommand(resource.treatmentId, resource.medicationId);
         }
     }
 }

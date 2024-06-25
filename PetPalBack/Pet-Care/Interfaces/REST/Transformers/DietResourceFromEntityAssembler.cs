@@ -7,7 +7,7 @@ namespace PetPalBack.Pet_Care.Interfaces.REST.Transformers
     {
         public static DietResource ToResourceFromEntity(Diet entity)
         {
-            return new DietResource(entity.Id, entity.Food, entity.Date);
+            return new DietResource(entity.Id, entity.Food, entity.Date, PetResourceFromEntityAssembler.ToResourceFromEntity(entity.pet));
         }
     }
 }

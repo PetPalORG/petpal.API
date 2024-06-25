@@ -1,4 +1,5 @@
 ﻿using Org.BouncyCastle.Crypto.Utilities;
+using PetPalBack.Pet_Care.Domain.Model.Aggregates;
 using PetPalBack.Pet_Care.Domain.Model.Commands;
 
 namespace PetPalBack.Pet_Care.Domain.Model.Entities
@@ -7,23 +8,21 @@ namespace PetPalBack.Pet_Care.Domain.Model.Entities
     {
         public int Id { get; set; }
         public string Food { get; set; }
+        public int petId { get; set; }
         public DateTime Date { get; set; }
+        public Pet pet { get; set; }
 
-        protected Diet()
+        public Diet(string Food, DateTime Date, int petId)
         {
-            this.Food = string.Empty;
-            this.Date = DateTime.Now;
-            
+            this.Food = Food;
+            this.Date = Date;
+            this.petId = petId;
         }
         public Diet(CreateDietCommand command)
         {
             this.Food = command.Food;
             this.Date = command.Date;
-        }
-        
-        public int getId()
-        {
-            return this.Id;
+            this.petId = command.petId;
         }
     }
 }

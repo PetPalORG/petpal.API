@@ -6,20 +6,15 @@ using PetPalBack.Shared.Domain.Repositories;
 
 namespace PetPalBack.Pet_Care.Application.Internal.CommandServices
 {
-    public class DietCommandService(IDietRepository dietRepository, IUnitOfWork unitOfWork) : IDietCommandService
+    public class DietCommandService(IDietRepository dietRepository, IPetRepository petRepository, IUnitOfWork unitOfWork) : IDietCommandService
     {
         public async Task<Diet?> Handle(CreateDietCommand command)
         {
-            var diet = new Diet(command);
-            try
-            {
-                await dietRepository.AddAsync(diet);
-                await unitOfWork.CompleteAsync();
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
+            var diet = new Diet(command.Food, command.Date, command.petId);
+            await dietRepository.AddAsync(diet);
+            await unitOfWork.CompleteAsync();
+            var pet = await petRepository.FindByIdAsync(command.petId);
+            diet.pet = pet;
             return diet;
         }
 

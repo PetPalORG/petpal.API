@@ -1,4 +1,4 @@
 ﻿namespace PetPalBack.Pet_Care.Domain.Model.Queries
 {
-    public record GetDietById(int id);
+    public record GetTreatmentDetailByIdQuery(int id);
 }

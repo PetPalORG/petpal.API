@@ -7,9 +7,19 @@ namespace PetPalBack.Pet_Care.Application.Internal.QueryServices
 {
     public class TreatmentQueryService(ITreatmentRepository treatmentRepository): ITreatmentQueryService
     {
-        public async Task<Treatment?> Handle(GetTreatmentById query)
+        public async Task<Treatment?> Handle(GetTreatmentByIdQuery query)
         {
             return await treatmentRepository.FindByIdAsync(query.id);
+        }
+
+        public async Task<IEnumerable<Treatment>> Handle(GetAllTreatmentsQuery query)
+        {
+            return await treatmentRepository.ListAsync();
+        }
+
+        public async Task<IEnumerable<Treatment>> Handle(GetTreatmentByAppointmentIdQuery query)
+        {
+            return await treatmentRepository.FindByAppointmentIdAsync(query.appointmentId);
         }
     }
 }

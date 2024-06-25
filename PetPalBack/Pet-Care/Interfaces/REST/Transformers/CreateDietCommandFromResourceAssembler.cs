@@ -7,7 +7,7 @@ namespace PetPalBack.Pet_Care.Interfaces.REST.Transformers
     {
         public static CreateDietCommand ToCommandFromResource(CreateDietResource resource)
         {
-            return new CreateDietCommand(resource.food, resource.date);
+            return new CreateDietCommand(resource.food, resource.date, resource.petId);
         }
     }
 }

@@ -11,18 +11,27 @@ namespace PetPalBack.Pet_Care.Interfaces.REST
     [ApiController]
     [Route("api/v1/[controller]")]
     [Produces(MediaTypeNames.Application.Json)]
-    public class PetController(IPetCommandService petCommandService, IPetQueryService petQueryService) : ControllerBase
+    public class PetsController(IPetCommandService petCommandService, IPetQueryService petQueryService) : ControllerBase
     {
         [HttpPost]
-        public async Task<ActionResult> CreatePet([FromBody] CreatePetResource resource)
+        public async Task<ActionResult> CreatePet([FromBody] CreatePetResource createPetResource)
         {
-            var createPetCommand = CreatePetCommandFromResourceAssembler.ToCommandFromResource(resource);
+            var createPetCommand = CreatePetCommandFromResourceAssembler.ToCommandFromResource(createPetResource);
             var result = await petCommandService.Handle(createPetCommand);
             if (result is null) return BadRequest();
-            return CreatedAtAction(nameof(GetPetById), new { id = result.Id }, PetResourceFromEntityAssembler.ToResourceFromEntity(result));
+            var resource = PetResourceFromEntityAssembler.ToResourceFromEntity(result);
+            return CreatedAtAction(nameof(GetPetById), new { id = result.Id }, resource);
+        }
+        [HttpGet]
+        public async Task<ActionResult> GetAllPets()
+        {
+            var getAllPetsQuery = new GetAllPetsQuery();
+            var result = await petQueryService.Handle(getAllPetsQuery);
+            var resources = result.Select(PetResourceFromEntityAssembler.ToResourceFromEntity);
+            return Ok(resources);
         }
         [HttpGet("id/{id}")]
-        public async Task<ActionResult> GetPetById(int id)
+        public async Task<ActionResult> GetPetById([FromRoute] int id)
         {
             var getPetByIdQuery = new GetPetByIdQuery(id);
             var result = await petQueryService.Handle(getPetByIdQuery);
@@ -31,7 +40,7 @@ namespace PetPalBack.Pet_Care.Interfaces.REST
             return Ok(resource);
         }
         [HttpDelete("id/{id}")]
-        public async Task<ActionResult> DeletePet(int id)
+        public async Task<ActionResult> DeletePet([FromRoute] int id)
         {
             try
             {

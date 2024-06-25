@@ -5,5 +5,6 @@ namespace PetPalBack.Pet_Care.Domain.Repositories
 {
     public interface IAppointmentRepository: IBaseRepository<Appointment>
     {
+        Task<IEnumerable<Appointment>> FindByPetIdAsync(int petId);
     }
 }
