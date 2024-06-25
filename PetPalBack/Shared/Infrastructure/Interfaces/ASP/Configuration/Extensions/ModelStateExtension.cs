@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace PetPalBack.shared.Interfaces.ASP.Configurations.Extensions
+namespace PetPalBack.Shared.Infrastructure.Interfaces.ASP.Configurations.Extensions
 {
     public static class ModelStateExtensions
     {
@@ -13,4 +13,3 @@ namespace PetPalBack.shared.Interfaces.ASP.Configurations.Extensions
         }
     }
 }
- 

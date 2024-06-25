@@ -1,9 +1,9 @@
-﻿using PetPalBack.shared.Domain.Repositories;
-using PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations;
+﻿using PetPalBack.Shared.Infrastructure.Persistance.EFC.Configurations;
 using Microsoft.EntityFrameworkCore;
-using System;
+using PetPalBack.Shared.Domain.Repositories;
 
-namespace PetPalBack.shared.Infrastructure.Persistance.EFC.Repositories
+
+namespace PetPalBack.Shared.Infrastructure.Persistance.EFC.Repositories
 {
     public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {

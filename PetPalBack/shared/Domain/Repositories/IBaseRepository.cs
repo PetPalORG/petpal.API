@@ -1,4 +1,4 @@
-﻿namespace PetPalBack.shared.Domain.Repositories
+﻿namespace PetPalBack.Shared.Domain.Repositories
 {
     public interface IBaseRepository<TEntity>
     {

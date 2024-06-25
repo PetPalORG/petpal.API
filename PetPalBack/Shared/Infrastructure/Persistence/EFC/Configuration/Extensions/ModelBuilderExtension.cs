@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations.Extensions
+namespace PetPalBack.Shared.Infrastructure.Persistance.EFC.Configurations.Extensions
 {
     public static class ModelBuilderExtension
     {
