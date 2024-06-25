@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PetPalBack.Pet_Care.Domain.Model.Aggregates;
 using PetPalBack.Pet_Care.Domain.Repositories;
-using PetPalBack.Shared.Infrastructure.Persistance.EPC.Configuration;
-using PetPalBack.Shared.Infrastructure.Persistance.EPC.Repositories;
+using PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration;
+using PetPalBack.Shared.Infrastructure.Persistence.EFC.Repositories;
 using System.Runtime.InteropServices;
 
 namespace PetPalBack.Pet_Care.Infraestructure.Repositories

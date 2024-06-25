@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 ﻿using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
-using Microsoft.EntityFrameworkCore;
 using PetPalBack.Pet_Care.Domain.Model.Aggregates;
 using PetPalBack.Pet_Care.Domain.Model.Entities;
 using PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
+using PetPalBack.Articles.Domain.Model.Aggregates;
 
 
 namespace PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration
@@ -29,7 +29,7 @@ namespace PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration
             builder.Entity<Article>().Property(a => a.author).IsRequired();
             builder.Entity<Article>().Property(a => a.date).IsRequired();
             builder.Entity<Article>().Property(a => a.imagePath).IsRequired();
-            builder.Entity<Article>().Property(a => a.authorImage).IsRequi
+            builder.Entity<Article>().Property(a => a.authorImage).IsRequired();
 
 
             builder.Entity<Pet>().HasKey(p => p.Id);

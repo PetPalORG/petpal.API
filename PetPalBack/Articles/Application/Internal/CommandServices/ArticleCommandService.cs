@@ -2,7 +2,7 @@
 using PetPalBack.Articles.Domain.Model.Commands;
 using PetPalBack.Articles.Domain.Repositories;
 using PetPalBack.Articles.Domain.Services;
-using PetPalBack.shared.Domain.Repositories;
+using PetPalBack.Shared.Domain.Repositories;
 
 namespace PetPalBack.Articles.Application.Internal.CommandServices
 {

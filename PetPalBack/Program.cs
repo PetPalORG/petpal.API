@@ -6,19 +6,15 @@ using PetPalBack.Articles.Domain.Repositories;
 using PetPalBack.Articles.Domain.Services;
 using PetPalBack.Articles.Infrastructure.Persistence.EFC.Repositories;
 using PetPalBack.Shared.Domain.Repositories;
-using PetPalBack.Shared.Infrastructure.Persistance.EFC.Configurations;
-using PetPalBack.Shared.Infrastructure.Persistance.EFC.Repositories;
-using PetPalBack.Shared.Infrastructure.Interfaces.ASP.Configurations;
+using PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration;
+using PetPalBack.Shared.Infrastructure.Persistence.EFC.Repositories;
+using PetPalBack.Shared.Infrastructure.Interfaces.ASP.Configuration;
 
 using PetPalBack.Pet_Care.Application.Internal.CommandServices;
 using PetPalBack.Pet_Care.Application.Internal.QueryServices;
 using PetPalBack.Pet_Care.Domain.Repositories;
 using PetPalBack.Pet_Care.Domain.Services;
 using PetPalBack.Pet_Care.Infraestructure.Repositories;
-using PetPalBack.Shared.Interfaces.ASP.Configurations;
-using PetPalBack.Shared.Domain.Repositories;
-using PetPalBack.Shared.Infrastructure.Persistance.EPC.Configuration;
-using PetPalBack.Shared.Infrastructure.Persistance.EPC.Repositories;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -36,7 +32,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<AppDbContext>(
     options =>

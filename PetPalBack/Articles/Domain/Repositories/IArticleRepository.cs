@@ -1,5 +1,5 @@
 ﻿using PetPalBack.Articles.Domain.Model.Aggregates;
-using PetPalBack.shared.Domain.Repositories;
+using PetPalBack.Shared.Domain.Repositories;
 
 namespace PetPalBack.Articles.Domain.Repositories
 {
