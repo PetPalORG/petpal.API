@@ -1,17 +1,24 @@
 using Microsoft.EntityFrameworkCore;
-using PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations;
+using PetPalBack.Pet_Care.Application.Internal.CommandServices;
+using PetPalBack.Pet_Care.Application.Internal.QueryServices;
+using PetPalBack.Pet_Care.Domain.Repositories;
+using PetPalBack.Pet_Care.Domain.Services;
+using PetPalBack.Pet_Care.Infraestructure.Repositories;
 using PetPalBack.shared.Interfaces.ASP.Configurations;
+using PetPalBack.Shared.Domain.Repositories;
+using PetPalBack.Shared.Infrastructure.Persistance.EPC.Configuration;
+using PetPalBack.Shared.Infrastructure.Persistance.EPC.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Add services to the container.
+// Add services to the container.
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
-builder.Services.AddControllers(options => options.Conventions.Add(new KebabCaseRouteNamingConvention()));
-
-//Add databases connections
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-//Configura database conect and loggin levels
 builder.Services.AddDbContext<AppDbContext>(
     options =>
     {
@@ -35,15 +42,50 @@ builder.Services.AddDbContext<AppDbContext>(
     }
 );
 
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
-// Add services to the container.
+//Configure Kebab Case Route Naming Convention
+builder.Services.AddControllers(option =>
+{
+    option.Conventions.Add(new KebabCaseRouteNamingConvention());
+});
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+builder.Services.AddScoped<IPetRepository, PetRepository>();
+builder.Services.AddScoped<IPetCommandService, PetCommandService>();
+builder.Services.AddScoped<IPetQueryService, PetQueryService>();
+
+builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
+builder.Services.AddScoped<IAppointmentCommandService, AppointmentCommandService>();
+builder.Services.AddScoped<IAppointmentQueryService, AppointmentQueryService>();
+
+builder.Services.AddScoped<ITreatmentRepository, TreatmentRepository>();
+builder.Services.AddScoped<ITreatmentCommandService, TreatmentCommandService>();
+builder.Services.AddScoped<ITreatmentQueryService, TreatmentQueryService>();
+
+builder.Services.AddScoped<ITreatmentDetailsRepository, TreatmentDetailsRepository>();
+builder.Services.AddScoped<ITreatmentDetailsCommandService, TreatmentDetailsCommandService>();
+builder.Services.AddScoped<ITreatmentDetailQueryService, TreatmentDetailQueryService>();
+
+builder.Services.AddScoped<IMedicationRepository, MedicationRepository>();
+builder.Services.AddScoped<IMedicationCommandService, MedicationCommandService>();
+builder.Services.AddScoped<IMedicationQueryService, MedicationQueryService>();
+
+builder.Services.AddScoped<IDietRepository, DietRepository>();
+builder.Services.AddScoped<IDietCommandService, DietCommandService>();
+builder.Services.AddScoped<IDietQueryService, DietQueryService>();
+
 
 var app = builder.Build();
+
+//Verify DatabaBase Objects are created
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<AppDbContext>();
+    context.Database.EnsureCreated();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
