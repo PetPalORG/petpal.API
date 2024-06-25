@@ -1,8 +1,10 @@
+﻿using Microsoft.EntityFrameworkCore;
 ﻿using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
 using Microsoft.EntityFrameworkCore;
 using PetPalBack.Pet_Care.Domain.Model.Aggregates;
 using PetPalBack.Pet_Care.Domain.Model.Entities;
 using PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
+
 
 namespace PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration
 {
@@ -17,6 +19,17 @@ namespace PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+
+            builder.Entity<Article>().ToTable("articles");
+            builder.Entity<Article>().HasKey(a => a.id);
+            builder.Entity<Article>().Property(a => a.id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Article>().Property(a => a.title).IsRequired();
+            builder.Entity<Article>().Property(a => a.content).IsRequired();
+            builder.Entity<Article>().Property(a => a.author).IsRequired();
+            builder.Entity<Article>().Property(a => a.date).IsRequired();
+            builder.Entity<Article>().Property(a => a.imagePath).IsRequired();
+            builder.Entity<Article>().Property(a => a.authorImage).IsRequi
 
 
             builder.Entity<Pet>().HasKey(p => p.Id);
@@ -68,6 +81,5 @@ namespace PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration
             //apply SnakeCase Naming Convention
             builder.UseSnakeCaseWithPluralizedTableNamingConvention();
         }
-
     }
 }

@@ -1,17 +1,36 @@
 using Microsoft.EntityFrameworkCore;
+
+using PetPalBack.Articles.Application.Internal.CommandServices;
+using PetPalBack.Articles.Application.Internal.QueryServices;
+using PetPalBack.Articles.Domain.Repositories;
+using PetPalBack.Articles.Domain.Services;
+using PetPalBack.Articles.Infrastructure.Persistence.EFC.Repositories;
+using PetPalBack.Shared.Domain.Repositories;
+using PetPalBack.Shared.Infrastructure.Persistance.EFC.Configurations;
+using PetPalBack.Shared.Infrastructure.Persistance.EFC.Repositories;
+using PetPalBack.Shared.Infrastructure.Interfaces.ASP.Configurations;
+
 using PetPalBack.Pet_Care.Application.Internal.CommandServices;
 using PetPalBack.Pet_Care.Application.Internal.QueryServices;
 using PetPalBack.Pet_Care.Domain.Repositories;
 using PetPalBack.Pet_Care.Domain.Services;
 using PetPalBack.Pet_Care.Infraestructure.Repositories;
-using PetPalBack.shared.Interfaces.ASP.Configurations;
+using PetPalBack.Shared.Interfaces.ASP.Configurations;
 using PetPalBack.Shared.Domain.Repositories;
 using PetPalBack.Shared.Infrastructure.Persistance.EPC.Configuration;
 using PetPalBack.Shared.Infrastructure.Persistance.EPC.Repositories;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+
+builder.Services.AddControllers(options => options.Conventions.Add(new KebabCaseRouteNamingConvention()));
+
+//Add Connection String
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -42,6 +61,8 @@ builder.Services.AddDbContext<AppDbContext>(
     }
 );
 
+
+//Configure Lowercase URLs
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 //Configure Kebab Case Route Naming Convention
@@ -76,16 +97,22 @@ builder.Services.AddScoped<IDietRepository, DietRepository>();
 builder.Services.AddScoped<IDietCommandService, DietCommandService>();
 builder.Services.AddScoped<IDietQueryService, DietQueryService>();
 
+// Articles Bounded Context Infection Configuration
+builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
+builder.Services.AddScoped<IArticleCommandService, ArticleCommandService>();
+builder.Services.AddScoped<IArticleQueryService, ArticleQueryService>();
+
 
 var app = builder.Build();
 
-//Verify DatabaBase Objects are created
+
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     var context = services.GetRequiredService<AppDbContext>();
     context.Database.EnsureCreated();
 }
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -95,6 +122,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
