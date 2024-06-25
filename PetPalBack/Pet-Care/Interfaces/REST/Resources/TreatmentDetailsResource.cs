@@ -1,6 +1,5 @@
 ﻿namespace PetPalBack.Pet_Care.Interfaces.REST.Resources
 {
-    public class TreatmentDetailsResource
-    {
-    }
+    public record TreatmentDetailsResource(int id, int treatmentId);
+    
 }

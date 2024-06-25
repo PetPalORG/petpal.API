@@ -9,6 +9,9 @@ namespace PetPalBack.Pet_Care.Domain.Model.Entities
         public string Dosage { get; set; }
         public string Frequency { get; set; }
         public string Duration { get; set; }
+        public int treatmentDetailId { get; set; }
+        public TreatmentDetail treatmentDetail { get; set; }
+       
 
         protected Medication()
         {
@@ -16,6 +19,7 @@ namespace PetPalBack.Pet_Care.Domain.Model.Entities
             this.Dosage = string.Empty;
             this.Frequency = string.Empty;
             this.Duration = string.Empty;
+            this.treatmentDetailId = 0;
         }
 
         public Medication(CreateMedicationCommand command)
@@ -24,6 +28,7 @@ namespace PetPalBack.Pet_Care.Domain.Model.Entities
             this.Dosage = command.Dosage;
             this.Frequency = command.Frequency;
             this.Duration = command.Duration;
+            this.treatmentDetailId = command.treatmentDetailId;
         }
     }
 }

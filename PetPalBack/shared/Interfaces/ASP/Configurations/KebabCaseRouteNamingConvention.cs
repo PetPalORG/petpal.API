@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.ApplicationModels;
-using PetPalBack.shared.Interfaces.ASP.Configurations.Extensions;
+using PetPalBack.Shared.Interfaces.ASP.Configuration.Extensions;
 
 namespace PetPalBack.shared.Interfaces.ASP.Configurations
 {

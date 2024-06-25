@@ -1,4 +1,5 @@
 ﻿using PetPalBack.Pet_Care.Domain.Model.Commands;
+using PetPalBack.Pet_Care.Domain.Model.Entities;
 
 namespace PetPalBack.Pet_Care.Domain.Model.Aggregates
 {
@@ -8,14 +9,15 @@ namespace PetPalBack.Pet_Care.Domain.Model.Aggregates
         public string Diagnosis { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public int AppointmentId { get; set; }
+        public int appointmentId { get; set; }
+        public Appointment appointment { get; set; }
+        public TreatmentDetail treatmentDetail { get; set; }
 
         protected Treatment()
         {
             this.Diagnosis = string.Empty;
             this.StartDate = DateTime.Now;
             this.EndDate = DateTime.Now;
-            this.AppointmentId = 0;
         }
 
         public Treatment(CreateTreatmentCommand command)
@@ -23,7 +25,17 @@ namespace PetPalBack.Pet_Care.Domain.Model.Aggregates
             this.Diagnosis = command.Diagnosis;
             this.StartDate = command.StartDate;
             this.EndDate = command.EndDate;
-            this.AppointmentId = command.AppointmentId;
+            this.appointmentId = command.AppointmentId;
+        }
+
+        public int getId()
+        {
+            return this.Id;
+        }
+
+        public void SetAppointment(int appointmentId)
+        {
+            this.appointmentId = appointmentId;
         }
     }
 }

@@ -1,25 +1,25 @@
-﻿using PetPalBack.Pet_Care.Domain.Model.Commands;
+﻿using PetPalBack.Pet_Care.Domain.Model.Aggregates;
+using PetPalBack.Pet_Care.Domain.Model.Commands;
 
 namespace PetPalBack.Pet_Care.Domain.Model.Entities
 {
     public class TreatmentDetail
     {
-        public int TreatmentId { get; set; }
-        public int MedicationId { get; set; }
-        public int DietId { get; set; }
+        public int id { get; set; }
+        public int treatmentId { get; set; }
+        public Medication medication { get; set; }
 
-        protected TreatmentDetail()
+        public Treatment treatment { get; set; }
+
+        public TreatmentDetail()
         {
-            this.TreatmentId = 0;
-            this.MedicationId = 0;
-            this.DietId = 0;
+            this.treatmentId = 0;
         }
 
         public TreatmentDetail(CreateTreatmentDetailsCommand command)
         {
-            this.TreatmentId = command.TreatmentId;
-            this.MedicationId = command.MedicationId;
-            this.DietId = command.DietId;
+            this.treatmentId = command.treatmentId;
         }
+
     }
 }
