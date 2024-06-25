@@ -1,13 +1,5 @@
-using MediatR;
 using Microsoft.EntityFrameworkCore;
-using PetPalBack.PetRegister.Application.Internal.CommandServices;
-using PetPalBack.PetRegister.Application.Internal.QueryServices;
-using PetPalBack.PetRegister.Domain.Repositories;
-using PetPalBack.PetRegister.Domain.Services;
-using PetPalBack.PetRegister.Infraestructure.Repositories;
 using PetPalBack.shared.Domain.Repositories;
-using PetPalBack.Domain.Repositories;
-using PetPalBack.Infrastructure.Persistence.EFC.Repositories;
 using PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations;
 using PetPalBack.shared.Infrastructure.Persistance.EFC.Repositories;
 using PetPalBack.Shared.Infrastructure.Interfaces.ASP.Configurations;
