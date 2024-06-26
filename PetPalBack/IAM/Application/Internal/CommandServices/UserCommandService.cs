@@ -5,7 +5,7 @@ using PetPalBack.IAM.Domain.Repositories;
 using PetPalBack.IAM.Domain.Services;
 using PetPalBack.IAM.Infrastructure.Hashing.BCrypt.Services;
 using PetPalBack.IAM.Infrastructure.Tokens.JWT.Services;
-using PetPalBack.shared.Domain.Repositories;
+using PetPalBack.Shared.Domain.Repositories;
 
 namespace PetPalBack.IAM.Application.Internal.CommandServices
 {
