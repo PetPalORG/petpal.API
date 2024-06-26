@@ -1,21 +1,34 @@
 using Microsoft.EntityFrameworkCore;
+using PetPalBack.IAM.Application.Internal.CommandServices;
+using PetPalBack.IAM.Application.Internal.OutboundServices;
+using PetPalBack.IAM.Application.Internal.QueryServices;
+using PetPalBack.IAM.Domain.Repositories;
+using PetPalBack.IAM.Domain.Services;
+using PetPalBack.IAM.Infrastructure.Hashing.BCrypt.Services;
+using PetPalBack.IAM.Infrastructure.Persistence.EFC.Repositories;
+using PetPalBack.IAM.Infrastructure.Tokens.JWT.Configuration;
+using PetPalBack.IAM.Infrastructure.Tokens.JWT.Services;
+using PetPalBack.IAM.Interfaces.ACL.Services;
+using PetPalBack.IAM.Interfaces.ACL;
+
 
 using PetPalBack.Articles.Application.Internal.CommandServices;
 using PetPalBack.Articles.Application.Internal.QueryServices;
 using PetPalBack.Articles.Domain.Repositories;
 using PetPalBack.Articles.Domain.Services;
 using PetPalBack.Articles.Infrastructure.Persistence.EFC.Repositories;
+
 using PetPalBack.Shared.Domain.Repositories;
 using PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration;
 using PetPalBack.Shared.Infrastructure.Persistence.EFC.Repositories;
 using PetPalBack.Shared.Infrastructure.Interfaces.ASP.Configuration;
+
 
 using PetPalBack.Pet_Care.Application.Internal.CommandServices;
 using PetPalBack.Pet_Care.Application.Internal.QueryServices;
 using PetPalBack.Pet_Care.Domain.Repositories;
 using PetPalBack.Pet_Care.Domain.Services;
 using PetPalBack.Pet_Care.Infraestructure.Repositories;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -56,15 +69,8 @@ builder.Services.AddDbContext<AppDbContext>(
     }
 );
 
-
-//Configure Lowercase URLs
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
-//Configure Kebab Case Route Naming Convention
-builder.Services.AddControllers(option =>
-{
-    option.Conventions.Add(new KebabCaseRouteNamingConvention());
-});
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
@@ -97,6 +103,14 @@ builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
 builder.Services.AddScoped<IArticleCommandService, ArticleCommandService>();
 builder.Services.AddScoped<IArticleQueryService, ArticleQueryService>();
 
+
+builder.Services.Configure<TokenSettings>(builder.Configuration.GetSection("TokenSettings"));
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserCommandService, UserCommandService>();
+builder.Services.AddScoped<IUserQueryService, UserQueryService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IHashingService, HashingService>();
+builder.Services.AddScoped<IIamContextFacade, IamContextFacade>();
 
 var app = builder.Build();
 

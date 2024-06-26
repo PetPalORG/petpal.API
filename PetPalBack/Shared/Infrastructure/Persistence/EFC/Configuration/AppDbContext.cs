@@ -1,3 +1,7 @@
+﻿using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
+using Microsoft.EntityFrameworkCore;
+using PetPalBack.IAM.Domain.Model.Aggregates;
+using PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 ﻿using Microsoft.EntityFrameworkCore;
 ﻿using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
 using PetPalBack.Pet_Care.Domain.Model.Aggregates;
@@ -20,6 +24,11 @@ namespace PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration
         {
             base.OnModelCreating(builder);
 
+
+            builder.Entity<User>().HasKey(u => u.Id);
+            builder.Entity<User>().Property(u => u.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<User>().Property(u => u.Username).IsRequired();
+            builder.Entity<User>().Property(u => u.PasswordHash).IsRequired();
 
             builder.Entity<Article>().ToTable("articles");
             builder.Entity<Article>().HasKey(a => a.id);
@@ -77,8 +86,6 @@ namespace PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration
                 .HasForeignKey<TreatmentDetail>(td => td.medicationId)
                 .HasPrincipalKey<Medication>(m => m.Id);
 
-
-            //apply SnakeCase Naming Convention
             builder.UseSnakeCaseWithPluralizedTableNamingConvention();
         }
     }
