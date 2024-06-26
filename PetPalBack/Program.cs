@@ -29,6 +29,8 @@ using PetPalBack.Pet_Care.Application.Internal.QueryServices;
 using PetPalBack.Pet_Care.Domain.Repositories;
 using PetPalBack.Pet_Care.Domain.Services;
 using PetPalBack.Pet_Care.Infraestructure.Repositories;
+using Microsoft.OpenApi.Models;
+using PetPalBack.IAM.Infrastructure.Pipeline.Middleware.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,7 +45,51 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(
+    c =>
+    {
+        c.SwaggerDoc("v1",
+            new OpenApiInfo
+            {
+                Title = "UPC.PetPal.API",
+                Version = "v1",
+                Description = "UPC PetPal API",
+                TermsOfService = new Uri("https://petpalteamupc.web.app"),
+                Contact = new OpenApiContact
+                {
+                    Name = "PetPalTeam",
+                    Email = "petpalteam@upc.edu.pe"
+                },
+                License = new OpenApiLicense
+                {
+                    Name = "Apache 2.0",
+                    Url = new Uri("https://www.apache.org/licenses/LICENSE-2.0.html")
+                }
+            });
+        c.EnableAnnotations();
+        c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+        {
+            In = ParameterLocation.Header,
+            Description = "Please enter token",
+            Name = "Authorization",
+            Type = SecuritySchemeType.Http,
+            BearerFormat = "JWT",
+            Scheme = "bearer"
+        });
+        c.AddSecurityRequirement(new OpenApiSecurityRequirement
+        {
+            {
+                new OpenApiSecurityScheme
+                {
+                    Reference = new OpenApiReference
+                    {
+                        Id = "Bearer", Type = ReferenceType.SecurityScheme
+                    }
+                },
+                Array.Empty<string>()
+            }
+        });
+    });
 
 
 builder.Services.AddDbContext<AppDbContext>(
@@ -70,6 +116,14 @@ builder.Services.AddDbContext<AppDbContext>(
 );
 
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllPolicy",
+        policy => policy.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
 
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -130,9 +184,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("AllowAllPolicy");
+
+// Add authorization middleware to pipeline
+app.UseRequestAuthorization();
+
 app.UseHttpsRedirection();
 
-
 app.UseAuthorization();
+
 app.MapControllers();
+
 app.Run();
