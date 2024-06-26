@@ -16,5 +16,10 @@ namespace PetPalBack.Pet_Care.Application.Internal.QueryServices
         {
             return await petRepository.ListAsync();
         }
+
+        public async Task<IEnumerable<Pet>> Handle(GetPetsByUserIdQuery query)
+        {
+            return await petRepository.FindByUserIdAsync(query.userId);
+        }
     }
 }

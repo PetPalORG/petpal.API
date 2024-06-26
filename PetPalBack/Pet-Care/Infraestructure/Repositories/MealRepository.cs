@@ -6,18 +6,18 @@ using PetPalBack.Shared.Infrastructure.Persistence.EFC.Repositories;
 
 namespace PetPalBack.Pet_Care.Infraestructure.Repositories
 {
-    public class DietRepository: BaseRepository<Diet>, IDietRepository
+    public class MealRepository: BaseRepository<Meal>, IMealRepository
     {
-        public DietRepository(AppDbContext context) : base(context)
+        public MealRepository(AppDbContext context) : base(context)
         { }
 
-        public new async Task<Diet?> FindByIdAsync(int id) =>
-            await Context.Set<Diet>().Include(d => d.pet)
+        public new async Task<Meal?> FindByIdAsync(int id) =>
+            await Context.Set<Meal>().Include(d => d.pet)
             .Where(d => d.Id == id).FirstOrDefaultAsync();
 
-        public async Task<IEnumerable<Diet>> FindByPetIdAsync(int petId)
+        public async Task<IEnumerable<Meal>> FindByPetIdAsync(int petId)
         {
-            return await Context.Set<Diet>()
+            return await Context.Set<Meal>()
                 .Include(d => d.pet)
                 .Where(d => d.petId == petId)
                 .ToListAsync();

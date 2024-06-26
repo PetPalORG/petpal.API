@@ -7,5 +7,6 @@ namespace PetPalBack.Pet_Care.Domain.Services
     {
         Task<IEnumerable<Pet>> Handle(GetAllPetsQuery query);
         Task<Pet?> Handle(GetPetByIdQuery query);
+        Task<IEnumerable<Pet>> Handle(GetPetsByUserIdQuery query);
     }
 }

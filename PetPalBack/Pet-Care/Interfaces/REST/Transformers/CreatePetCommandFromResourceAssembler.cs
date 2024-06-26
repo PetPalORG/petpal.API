@@ -7,7 +7,7 @@ namespace PetPalBack.Pet_Care.Interfaces.REST.Transformers
     {
         public static CreatePetCommand ToCommandFromResource(CreatePetResource command)
         {
-            return new CreatePetCommand(command.Name, command.Species, command.Breed, command.BirthDate, command.Weight);
+            return new CreatePetCommand(command.Name, command.Species, command.Breed, command.age, command.Weight, command.imagePath, command.description, command.userId);
         }
     }
 }

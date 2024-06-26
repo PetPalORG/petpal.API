@@ -7,7 +7,7 @@ namespace PetPalBack.Pet_Care.Interfaces.REST.Transformers
     {
         public static AppointmentResource ToResourceFromEntity(Appointment resource)
         {
-            return new AppointmentResource(resource.id, resource.reason, resource.date, resource.petId);
+            return new AppointmentResource(resource.id, resource.vet, resource.reason, resource.detail, resource.date, resource.hour, resource.petId);
         }
     }
 }

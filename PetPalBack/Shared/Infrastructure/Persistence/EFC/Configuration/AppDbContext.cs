@@ -2,11 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using PetPalBack.IAM.Domain.Model.Aggregates;
 using PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
-﻿using Microsoft.EntityFrameworkCore;
-﻿using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
 using PetPalBack.Pet_Care.Domain.Model.Aggregates;
 using PetPalBack.Pet_Care.Domain.Model.Entities;
-using PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using PetPalBack.Articles.Domain.Model.Aggregates;
 
 
@@ -46,14 +43,24 @@ namespace PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration
             builder.Entity<Pet>().Property(p => p.Name).IsRequired();
             builder.Entity<Pet>().Property(p => p.Species).IsRequired();
             builder.Entity<Pet>().Property(p => p.Breed).IsRequired();
-            builder.Entity<Pet>().Property(p => p.BirthDate).IsRequired();
+            builder.Entity<Pet>().Property(p => p.age).IsRequired();
             builder.Entity<Pet>().Property(p => p.Weight).IsRequired();
+            builder.Entity<Pet>().Property(p => p.imagePath).IsRequired();
+            builder.Entity<Pet>().Property(p => p.description).IsRequired();
 
+            builder.Entity<Pet>()
+                .HasOne(p => p.user)
+                .WithMany(u => u.pet)
+                .HasForeignKey(p => p.userId)
+                .HasPrincipalKey(u => u.Id);
 
             builder.Entity<Appointment>().HasKey(a => a.id);
             builder.Entity<Appointment>().Property(a => a.id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Appointment>().Property(a => a.vet).IsRequired();
             builder.Entity<Appointment>().Property(a => a.reason).IsRequired();
+            builder.Entity<Appointment>().Property(a => a.detail).IsRequired();
             builder.Entity<Appointment>().Property(a => a.date).IsRequired();
+            builder.Entity<Appointment>().Property(a => a.hour).IsRequired();
 
             builder.Entity<Appointment>()
                 .HasOne(a => a.pet)
@@ -67,11 +74,24 @@ namespace PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration
                 .HasForeignKey<Treatment>(t => t.appointmentId)
                 .HasPrincipalKey<Appointment>(a => a.id);
 
-            builder.Entity<Diet>()
+            builder.Entity<Meal>().HasKey(m => m.Id);
+            builder.Entity<Meal>().Property(m => m.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Meal>().Property(m => m.Food).IsRequired();
+            builder.Entity<Meal>().Property(m => m.description).IsRequired();
+            builder.Entity<Meal>().Property(m => m.hour).IsRequired();
+
+
+            builder.Entity<Meal>()
                 .HasOne(d => d.pet)
                 .WithMany(p => p.diet)
                 .HasForeignKey(d => d.petId)
                 .HasPrincipalKey(p => p.Id);
+
+
+            builder.Entity<Treatment>().HasKey(m => m.Id);
+            builder.Entity<Treatment>().Property(m => m.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Treatment>().Property(m => m.Diagnosis).IsRequired();
+            builder.Entity<Treatment>().Property(m => m.StartDate).IsRequired();
 
 
             builder.Entity<Treatment>()
@@ -79,6 +99,12 @@ namespace PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration
                 .WithOne(td => td.treatment)
                 .HasForeignKey<TreatmentDetail>(td => td.treatmentId)
                 .HasPrincipalKey<Treatment>(t => t.Id);
+
+            builder.Entity<Medication>().HasKey(m => m.Id);
+            builder.Entity<Medication>().Property(m => m.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Medication>().Property(m => m.Name).IsRequired();
+            builder.Entity<Medication>().Property(m => m.Dosage).IsRequired();
+            builder.Entity<Medication>().Property(m => m.indications).IsRequired();
 
             builder.Entity<Medication>()
                 .HasOne(m => m.treatmentDetail)

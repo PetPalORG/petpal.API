@@ -4,24 +4,27 @@ using PetPalBack.Pet_Care.Domain.Model.Commands;
 
 namespace PetPalBack.Pet_Care.Domain.Model.Entities
 {
-    public class Diet
+    public class Meal
     {
         public int Id { get; set; }
         public string Food { get; set; }
+        public string description { get; set; }
         public int petId { get; set; }
-        public DateTime Date { get; set; }
+        public string hour { get; set; }
         public Pet pet { get; set; }
 
-        public Diet(string Food, DateTime Date, int petId)
+        public Meal(string Food, string description, string hour, int petId)
         {
             this.Food = Food;
-            this.Date = Date;
+            this.description = description;
+            this.hour = hour;
             this.petId = petId;
         }
-        public Diet(CreateDietCommand command)
+        public Meal(CreateMealCommand command)
         {
             this.Food = command.Food;
-            this.Date = command.Date;
+            this.description = command.description;
+            this.hour = command.hour;
             this.petId = command.petId;
         }
     }

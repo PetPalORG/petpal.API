@@ -10,14 +10,14 @@ namespace PetPalBack.Pet_Care.Interfaces.REST
     [Route("api/v1/pets/{petId}/diet")]
     [Produces(MediaTypeNames.Application.Json)]
     [Tags("Pets Diet")]
-    public class PetsDietController(IDietQueryService dietQueryService): ControllerBase
+    public class PetsMealController(IMealQueryService dietQueryService): ControllerBase
     {
         [HttpGet]
         public async Task<ActionResult> GetDietByPetId([FromRoute] int petId)
         {
-            var getDietByPetIdQuery = new GetDietByPetIdQuery(petId);
+            var getDietByPetIdQuery = new GetMealByPetIdQuery(petId);
             var diet = await dietQueryService.Handle(getDietByPetIdQuery);
-            var resources = diet.Select(DietResourceFromEntityAssembler.ToResourceFromEntity);
+            var resources = diet.Select(MealResourceFromEntityAssembler.ToResourceFromEntity);
             return Ok(resources);
         }
     }

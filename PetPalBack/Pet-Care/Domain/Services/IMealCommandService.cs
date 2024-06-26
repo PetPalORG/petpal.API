@@ -3,9 +3,9 @@ using PetPalBack.Pet_Care.Domain.Model.Entities;
 
 namespace PetPalBack.Pet_Care.Domain.Services
 {
-    public interface IDietCommandService
+    public interface IMealCommandService
     {
-        Task<Diet?> Handle(CreateDietCommand command);
-        Task Handle(DeleteDietCommand command);
+        Task<Meal?> Handle(CreateMealCommand command);
+        Task Handle(DeleteMealCommand command);
     }
 }

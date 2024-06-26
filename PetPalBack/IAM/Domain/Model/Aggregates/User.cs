@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using PetPalBack.Pet_Care.Domain.Model.Aggregates;
+using System.Text.Json.Serialization;
 
 namespace PetPalBack.IAM.Domain.Model.Aggregates
 {
@@ -9,6 +10,7 @@ namespace PetPalBack.IAM.Domain.Model.Aggregates
         public int Id { get; }
 
         public string Username { get; private set; } = username;
+        public IEnumerable<Pet> pet { get; set; }
 
         [JsonIgnore] public string PasswordHash { get; private set; } = passwordHash;
 

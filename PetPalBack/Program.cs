@@ -94,9 +94,9 @@ builder.Services.AddScoped<IMedicationRepository, MedicationRepository>();
 builder.Services.AddScoped<IMedicationCommandService, MedicationCommandService>();
 builder.Services.AddScoped<IMedicationQueryService, MedicationQueryService>();
 
-builder.Services.AddScoped<IDietRepository, DietRepository>();
-builder.Services.AddScoped<IDietCommandService, DietCommandService>();
-builder.Services.AddScoped<IDietQueryService, DietQueryService>();
+builder.Services.AddScoped<IMealRepository, MealRepository>();
+builder.Services.AddScoped<IMealCommandService, MealCommandService>();
+builder.Services.AddScoped<IMealQueryService, MealQueryService>();
 
 // Articles Bounded Context Infection Configuration
 builder.Services.AddScoped<IArticleRepository, ArticleRepository>();

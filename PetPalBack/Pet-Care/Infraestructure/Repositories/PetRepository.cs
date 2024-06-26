@@ -15,5 +15,13 @@ namespace PetPalBack.Pet_Care.Infraestructure.Repositories
         {
             return await Context.Set<Pet>().FirstOrDefaultAsync(p => p.Name == Name);
         }
+
+        public async Task<IEnumerable<Pet>> FindByUserIdAsync(int userId)
+        {
+            return await Context.Set<Pet>()
+                .Include(p => p.user)
+                .Where(p => p.userId == userId)
+                .ToListAsync();
+        }
     }
 }

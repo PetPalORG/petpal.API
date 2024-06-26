@@ -1,4 +1,4 @@
 ﻿namespace PetPalBack.Pet_Care.Interfaces.REST.Resources
 {
-    public record CreateAppointmentResource(string reason, DateTime date, int petId);
+    public record CreateAppointmentResource(string vet, string reason, string detail, DateTime date, string hour, int petId);
 }

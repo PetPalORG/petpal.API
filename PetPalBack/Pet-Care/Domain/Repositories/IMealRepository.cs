@@ -3,8 +3,8 @@ using PetPalBack.Shared.Domain.Repositories;
 
 namespace PetPalBack.Pet_Care.Domain.Repositories
 {
-    public interface IDietRepository: IBaseRepository<Diet>
+    public interface IMealRepository: IBaseRepository<Meal>
     {
-        Task <IEnumerable<Diet>> FindByPetIdAsync(int petId);
+        Task <IEnumerable<Meal>> FindByPetIdAsync(int petId);
     }
 }

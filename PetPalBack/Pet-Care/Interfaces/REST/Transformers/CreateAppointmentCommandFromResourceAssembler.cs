@@ -7,7 +7,7 @@ namespace PetPalBack.Pet_Care.Interfaces.REST.Transformers
     {
         public static CreateAppointmentCommand ToCommandFromResource(CreateAppointmentResource resource)
         {
-            return new CreateAppointmentCommand(resource.reason, resource.date, resource.petId);
+            return new CreateAppointmentCommand(resource.vet, resource.reason, resource.detail, resource.date, resource.hour, resource.petId);
         }
     }
 }
