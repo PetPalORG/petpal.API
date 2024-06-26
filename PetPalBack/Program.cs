@@ -10,10 +10,10 @@ using PetPalBack.IAM.Infrastructure.Tokens.JWT.Configuration;
 using PetPalBack.IAM.Infrastructure.Tokens.JWT.Services;
 using PetPalBack.IAM.Interfaces.ACL.Services;
 using PetPalBack.IAM.Interfaces.ACL;
-using PetPalBack.shared.Domain.Repositories;
-using PetPalBack.shared.Infrastructure.Persistance.EFC.Configurations;
-using PetPalBack.shared.Infrastructure.Persistance.EFC.Repositories;
-using PetPalBack.shared.Interfaces.ASP.Configurations;
+using PetPalBack.Shared.Domain.Repositories;
+using PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration;
+using PetPalBack.Shared.Infrastructure.Persistence.EFC.Repositories;
+using PetPalBack.Shared.Infrastructure.Interfaces.ASP.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
