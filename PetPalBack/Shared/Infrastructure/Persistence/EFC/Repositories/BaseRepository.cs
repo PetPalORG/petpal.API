@@ -1,4 +1,6 @@
 ﻿using PetPalBack.Shared.Domain.Repositories;
+﻿using Microsoft.EntityFrameworkCore;
+using PetPalBack.Shared.Domain.Repositories;
 using PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration;
 
 namespace PetPalBack.Shared.Infrastructure.Persistence.EFC.Repositories
