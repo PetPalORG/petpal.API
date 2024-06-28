@@ -1,0 +1,6 @@
+@PetPalBack_HostAddress = http://localhost:5255
+
+GET {{PetPalBack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
