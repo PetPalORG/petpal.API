@@ -140,10 +140,6 @@ builder.Services.AddScoped<ITreatmentRepository, TreatmentRepository>();
 builder.Services.AddScoped<ITreatmentCommandService, TreatmentCommandService>();
 builder.Services.AddScoped<ITreatmentQueryService, TreatmentQueryService>();
 
-builder.Services.AddScoped<ITreatmentDetailsRepository, TreatmentDetailsRepository>();
-builder.Services.AddScoped<ITreatmentDetailsCommandService, TreatmentDetailsCommandService>();
-builder.Services.AddScoped<ITreatmentDetailQueryService, TreatmentDetailQueryService>();
-
 builder.Services.AddScoped<IMedicationRepository, MedicationRepository>();
 builder.Services.AddScoped<IMedicationCommandService, MedicationCommandService>();
 builder.Services.AddScoped<IMedicationQueryService, MedicationQueryService>();
@@ -187,7 +183,7 @@ if (app.Environment.IsDevelopment())
 app.UseCors("AllowAllPolicy");
 
 // Add authorization middleware to pipeline
-app.UseRequestAuthorization();
+//app.UseRequestAuthorization();
 
 app.UseHttpsRedirection();
 

@@ -12,5 +12,9 @@ namespace PetPalBack.Pet_Care.Application.Internal.QueryServices
             return await medicationRepository.FindByIdAsync(query.id);
         }
 
+        public async Task<IEnumerable<Medication>> Handle(GetMedicationByTreatmentId query)
+        {
+            return await medicationRepository.FindByTreatmentIdAsync(query.treatmentId);
+        }
     }
 }

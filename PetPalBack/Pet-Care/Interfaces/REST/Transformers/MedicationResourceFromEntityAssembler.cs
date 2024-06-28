@@ -7,7 +7,7 @@ namespace PetPalBack.Pet_Care.Interfaces.REST.Transformers
     {
         public static MedicationResource ToResourceFromEntity(Medication entity)
         {
-            return new MedicationResource(entity.Id, entity.Name, entity.Dosage, entity.indications);
+            return new MedicationResource(entity.Id, entity.Name, entity.Dosage, entity.indications, entity.treatmentId);
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Net.Mime;
 namespace PetPalBack.Articles.Interfaces.REST
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [Produces(MediaTypeNames.Application.Json)]
     [Tags("Article")]
     public class ArticleController(IArticleCommandService articleCommandService, IArticleQueryService articleQueryService): ControllerBase

@@ -11,7 +11,7 @@ namespace PetPalBack.Pet_Care.Domain.Model.Aggregates
         public DateTime EndDate { get; set; }
         public int appointmentId { get; set; }
         public Appointment appointment { get; set; }
-        public TreatmentDetail treatmentDetail { get; set; }
+        public IEnumerable<Medication> medication { get; set; }
 
         public Treatment(string Diagnosis, DateTime StartDate, DateTime EndDate, int appointmentId)
         {

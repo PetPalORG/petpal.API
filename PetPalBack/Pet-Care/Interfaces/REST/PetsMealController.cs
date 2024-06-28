@@ -7,17 +7,17 @@ using System.Net.Mime;
 namespace PetPalBack.Pet_Care.Interfaces.REST
 {
     [ApiController]
-    [Route("api/v1/pets/{petId}/diet")]
+    [Route("api/v1/pets/{petId}/meal")]
     [Produces(MediaTypeNames.Application.Json)]
-    [Tags("Pets Diet")]
+    [Tags("Pet meals")]
     public class PetsMealController(IMealQueryService dietQueryService): ControllerBase
     {
         [HttpGet]
-        public async Task<ActionResult> GetDietByPetId([FromRoute] int petId)
+        public async Task<ActionResult> GetMealByPetId([FromRoute] int petId)
         {
-            var getDietByPetIdQuery = new GetMealByPetIdQuery(petId);
-            var diet = await dietQueryService.Handle(getDietByPetIdQuery);
-            var resources = diet.Select(MealResourceFromEntityAssembler.ToResourceFromEntity);
+            var getMealByPetIdQuery = new GetMealByPetIdQuery(petId);
+            var meal = await dietQueryService.Handle(getMealByPetIdQuery);
+            var resources = meal.Select(MealResourceFromEntityAssembler.ToResourceFromEntity);
             return Ok(resources);
         }
     }

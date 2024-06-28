@@ -1,4 +1,5 @@
-﻿using PetPalBack.Pet_Care.Domain.Model.Commands;
+﻿using PetPalBack.Pet_Care.Domain.Model.Aggregates;
+using PetPalBack.Pet_Care.Domain.Model.Commands;
 
 namespace PetPalBack.Pet_Care.Domain.Model.Entities
 {
@@ -8,13 +9,15 @@ namespace PetPalBack.Pet_Care.Domain.Model.Entities
         public string Name { get; set; }
         public string Dosage { get; set; }
         public string indications { get; set; }
-        public TreatmentDetail treatmentDetail { get; set; }
-       
-        public Medication(string Name, string Dosage, string indications)
+        public int treatmentId { get; set; }
+        public Treatment treatment { get; set; }
+
+        public Medication(string Name, string Dosage, string indications, int treatmentId)
         {
             this.Name = Name;
             this.Dosage = Dosage;
             this.indications = indications;
+            this.treatmentId = treatmentId;
         }
 
         public Medication(CreateMedicationCommand command)
@@ -22,6 +25,7 @@ namespace PetPalBack.Pet_Care.Domain.Model.Entities
             this.Name = command.Name;
             this.Dosage = command.Dosage;
             this.indications = command.indications;
+            this.treatmentId = command.treatmentId;
         }
     }
 }

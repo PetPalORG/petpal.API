@@ -6,20 +6,13 @@ using PetPalBack.Shared.Domain.Repositories;
 
 namespace PetPalBack.Pet_Care.Application.Internal.CommandServices
 {
-    public class MedicationCommandService(IMedicationRepository medicationRepository, IUnitOfWork unitOfWork): IMedicationCommandService
+    public class MedicationCommandService(IMedicationRepository medicationRepository, ITreatmentRepository treatmentRepository, IUnitOfWork unitOfWork): IMedicationCommandService
     {
         public async Task<Medication?> Handle(CreateMedicationCommand command)
         {
-            var medication = new Medication(command);
-            try
-            {
-                await medicationRepository.AddAsync(medication);
-                await unitOfWork.CompleteAsync();
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
+            var medication = new Medication(command.Name, command.Dosage, command.indications, command.treatmentId);
+            await medicationRepository.AddAsync(medication);
+            await unitOfWork.CompleteAsync();
             return medication;
         }
 

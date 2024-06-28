@@ -5,6 +5,7 @@ using PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using PetPalBack.Pet_Care.Domain.Model.Aggregates;
 using PetPalBack.Pet_Care.Domain.Model.Entities;
 using PetPalBack.Articles.Domain.Model.Aggregates;
+using System.Reflection.Emit;
 
 
 namespace PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration
@@ -93,12 +94,11 @@ namespace PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration
             builder.Entity<Treatment>().Property(m => m.Diagnosis).IsRequired();
             builder.Entity<Treatment>().Property(m => m.StartDate).IsRequired();
 
-
             builder.Entity<Treatment>()
-                .HasOne(t => t.treatmentDetail)
-                .WithOne(td => td.treatment)
-                .HasForeignKey<TreatmentDetail>(td => td.treatmentId)
-                .HasPrincipalKey<Treatment>(t => t.Id);
+                .HasOne(t => t.appointment)
+                .WithOne(a => a.treatment)
+                .HasForeignKey<Treatment>(t => t.appointmentId)
+                .HasPrincipalKey<Appointment>(a => a.id);
 
             builder.Entity<Medication>().HasKey(m => m.Id);
             builder.Entity<Medication>().Property(m => m.Id).IsRequired().ValueGeneratedOnAdd();
@@ -107,10 +107,12 @@ namespace PetPalBack.Shared.Infrastructure.Persistence.EFC.Configuration
             builder.Entity<Medication>().Property(m => m.indications).IsRequired();
 
             builder.Entity<Medication>()
-                .HasOne(m => m.treatmentDetail)
-                .WithOne(td => td.medication)
-                .HasForeignKey<TreatmentDetail>(td => td.medicationId)
-                .HasPrincipalKey<Medication>(m => m.Id);
+                .HasOne(m => m.treatment)
+                .WithMany(t => t.medication)
+                .HasForeignKey(m => m.treatmentId)
+                .HasPrincipalKey(t => t.Id);
+
+
 
             builder.UseSnakeCaseWithPluralizedTableNamingConvention();
         }
