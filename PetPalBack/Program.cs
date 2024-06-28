@@ -45,53 +45,57 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(
-    c =>
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
     {
-        c.SwaggerDoc("v1",
-            new OpenApiInfo
-            {
-                Title = "UPC.PetPal.API",
-                Version = "v1",
-                Description = "UPC PetPal API",
-                TermsOfService = new Uri("https://petpalteamupc.web.app"),
-                Contact = new OpenApiContact
-                {
-                    Name = "PetPalTeam",
-                    Email = "petpalteam@upc.edu.pe"
-                },
-                License = new OpenApiLicense
-                {
-                    Name = "Apache 2.0",
-                    Url = new Uri("https://www.apache.org/licenses/LICENSE-2.0.html")
-                }
-            });
-        c.EnableAnnotations();
-        c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+        Title = "UPC.PetPal.API",
+        Version = "v1",
+        Description = "UPC PetPal API",
+        TermsOfService = new Uri("https://petpalteamupc.web.app"),
+        Contact = new OpenApiContact
         {
-            In = ParameterLocation.Header,
-            Description = "Please enter token",
-            Name = "Authorization",
-            Type = SecuritySchemeType.Http,
-            BearerFormat = "JWT",
-            Scheme = "bearer"
-        });
-        c.AddSecurityRequirement(new OpenApiSecurityRequirement
+            Name = "PetPalTeam",
+            Email = "petpalteam@upc.edu.pe"
+        },
+        License = new OpenApiLicense
         {
-            {
-                new OpenApiSecurityScheme
-                {
-                    Reference = new OpenApiReference
-                    {
-                        Id = "Bearer", Type = ReferenceType.SecurityScheme
-                    }
-                },
-                Array.Empty<string>()
-            }
-        });
+            Name = "Apache 2.0",
+            Url = new Uri("https://www.apache.org/licenses/LICENSE-2.0.html")
+        }
     });
 
+    c.EnableAnnotations();
 
+    // Ajustar la definición de seguridad para ser compatible con OpenAPI 2.0
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+        Type = SecuritySchemeType.ApiKey,
+        Name = "Authorization",
+        In = ParameterLocation.Header
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                },
+                In = ParameterLocation.Header,
+            },
+            new List<string>()
+        }
+    });
+});
+
+
+
+ 
 builder.Services.AddDbContext<AppDbContext>(
     options =>
     {
