@@ -9,7 +9,7 @@ namespace PetPalBack.Pet_Care.Interfaces.REST
     [ApiController]
     [Route("api/v1/treatments/{treatmentId}/medication")]
     [Produces(MediaTypeNames.Application.Json)]
-    [Tags("Treatments detail")]
+    [Tags("Treatments medication")]
     public class TreatmentsMedicationController(IMedicationQueryService medicationQueryService): ControllerBase
     {
         [HttpGet]
